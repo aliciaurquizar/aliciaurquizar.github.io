@@ -1,6 +1,5 @@
 /* General */
 body {
-  body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9f9;
   color: #333;
@@ -151,9 +150,40 @@ footer {
   margin-top: 60px;
 }
 
-
+/* Colores por sección */
 #fotografia h3 { color: #FF6F61; }    /* rosa suave */
 #videoarte h3 { color: #6B5B95; }     /* morado */
 #documentales h3 { color: #88B04B; }  /* verde */
 #cortometrajes h3 { color: #FFA500; } /* naranja */
+
+/* Categorías flotantes alrededor del nombre */
+.categories {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cat {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.cat:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Colores por categoría */
+.fotografia { background-color: #FF6F61; }    /* rosa suave */
+.videoarte { background-color: #6B5B95; }     /* morado */
+.documentales { background-color: #88B04B; }  /* verde */
+.cortometrajes { background-color: #FFA500; } /* naranja */
 
