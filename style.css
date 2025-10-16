@@ -55,6 +55,8 @@ header, section, footer {
 
 header {
   text-align: center;
+  position: relative;
+  padding-bottom: 120px; /* espacio para las palabras alrededor */
 }
 
 .hero-photo {
@@ -64,7 +66,7 @@ header {
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
-  border: 3px solid #0077b5; /* borde azul tipo LinkedIn */
+  border: 3px solid #0077b5;
 }
 
 h1 {
@@ -151,39 +153,63 @@ footer {
 }
 
 /* Colores por sección */
-#fotografia h3 { color: #FF6F61; }    /* rosa suave */
-#videoarte h3 { color: #6B5B95; }     /* morado */
-#documentales h3 { color: #88B04B; }  /* verde */
-#cortometrajes h3 { color: #FFA500; } /* naranja */
+#fotografia h3 { color: #FF6F61; }
+#videoarte h3 { color: #6B5B95; }
+#documentales h3 { color: #88B04B; }
+#cortometrajes h3 { color: #FFA500; }
 
 /* Categorías flotantes alrededor del nombre */
-.categories {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
+.categories-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
 
-.cat {
-  display: inline-block;
+.categories-wrapper .cat {
+  position: absolute;
   padding: 6px 14px;
-  border-radius: 20px;
+  border-radius: 12px;
   font-weight: 600;
   color: #fff;
-  text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s;
+  text-decoration: none;
 }
 
-.cat:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
+.categories-wrapper .cat:hover {
+  transform: scale(1.2);
 }
 
-/* Colores por categoría */
-.fotografia { background-color: #FF6F61; }    /* rosa suave */
-.videoarte { background-color: #6B5B95; }     /* morado */
-.documentales { background-color: #88B04B; }  /* verde */
-.cortometrajes { background-color: #FFA500; } /* naranja */
+/* Posiciones circulares alrededor de la foto */
+.fotografia {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FF6F61;
+  font-size: 1rem;
+}
 
+.videoarte {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #6B5B95;
+  font-size: 1.1rem;
+}
+
+.documentales {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #88B04B;
+  font-size: 0.9rem;
+}
+
+.cortometrajes {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #FFA500;
+  font-size: 1rem;
+}
