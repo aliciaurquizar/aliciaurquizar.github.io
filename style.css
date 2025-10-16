@@ -151,3 +151,9 @@ footer {
   margin-top: 60px;
 }
 
+
+#fotografia h3 { color: #FF6F61; }    /* rosa suave */
+#videoarte h3 { color: #6B5B95; }     /* morado */
+#documentales h3 { color: #88B04B; }  /* verde */
+#cortometrajes h3 { color: #FFA500; } /* naranja */
+
