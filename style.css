@@ -50,7 +50,9 @@ nav ul li a:hover {
 header {
   text-align: center;
   position: relative;
-  padding: 100px 20px 60px; /* espacio arriba y abajo */
+  padding: 120px 20px 80px; /* más espacio arriba y abajo */
+  background-color: #f0f4f8; /* color claro profesional */
+  border-bottom: 1px solid #ddd; /* separación suave */
 }
 
 .hero-photo {
@@ -63,22 +65,26 @@ header {
   border: 3px solid #0077b5;
 }
 
+/* Nombre */
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
   margin-bottom: 10px;
   position: relative;
   z-index: 2;
+  color: #1a1a1a; /* color más oscuro para contraste */
 }
 
+/* Frase debajo del nombre */
 p {
-  font-size: 1.1rem;
-  margin-top: 0;
+  font-size: 1.2rem;
+  margin-top: 5px;
   position: relative;
   z-index: 2;
-  color: #555;
+  color: #555; 
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
-
 /* Palabras flotantes alrededor del nombre */
 .categories-floating {
   position: absolute;
