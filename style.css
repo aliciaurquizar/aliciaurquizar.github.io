@@ -46,13 +46,11 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* Secciones */
 /* HEADER */
 header {
   text-align: center;
   position: relative;
-  margin-top: 130px; /* espacio para navbar */
-  padding-bottom: 0;
+  padding: 100px 20px 60px; /* espacio arriba y abajo */
 }
 
 .hero-photo {
@@ -74,14 +72,17 @@ h1 {
 }
 
 p {
+  font-size: 1.1rem;
+  margin-top: 0;
   position: relative;
   z-index: 2;
+  color: #555;
 }
 
-/* Palabras flotando alrededor del nombre sin afectar el flujo */
+/* Palabras flotantes alrededor del nombre */
 .categories-floating {
   position: absolute;
-  top: 50%; /* alineado vertical al centro de h1 */
+  top: 50%; 
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -98,13 +99,12 @@ p {
   transition: transform 0.3s, opacity 0.3s;
 }
 
-/* Hover */
 .categories-floating .cat:hover {
   transform: scale(1.15);
   opacity: 1;
 }
 
-/* Estilos individuales y posiciones alrededor del h1 */
+/* Posiciones y estilos individuales */
 .fotografia {
   top: -40px;
   left: 10%;
@@ -145,6 +145,30 @@ p {
   transform: rotate(7deg);
 }
 
+/* SECCIONES */
+section {
+  max-width: 1000px;
+  margin: 80px auto; /* espacio entre secciones */
+  padding: 0 25px;
+}
+
+/* Títulos de secciones */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0077b5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
 /* Galería */
 .gallery {
   display: flex;
@@ -177,11 +201,35 @@ p {
   border-radius: 8px;
 }
 
+/* Listas de Documentales y Cortometrajes */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+ul li a {
+  color: #0077b5;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+ul li a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+
 /* Footer */
 footer {
   text-align: center;
   font-size: 0.9em;
   color: #777;
   margin-top: 60px;
+  padding-bottom: 40px;
 }
+
 
