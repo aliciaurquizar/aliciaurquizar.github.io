@@ -184,18 +184,15 @@ h3 {
 }
 
 .gallery img {
-  width: 30%;             /* ancho relativo al contenedor */
+  width: auto;
+  max-width: 30%;
+  height: 200px;         /* altura uniforme */
+  object-fit: cover;     /* mantiene proporción y recorta exceso */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s;
-  object-fit: cover;      /* mantiene proporción y recorta si es necesario */
-  height: 200px;          /* altura uniforme para todas las imágenes */
 }
 
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
 
 /* Videos */
 .videos {
