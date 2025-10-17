@@ -46,14 +46,26 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* HEADER */
+/* Header */
 header {
   text-align: center;
-  position: relative;
-  padding: 100px 20px 60px;
-  background-color: #f0f4f8; /* color claro profesional */
+  padding: 120px 20px 60px;
+  background-color: #eef2f5; /* fondo claro profesional */
 }
 
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+}
+
+/* Hero photo */
 .hero-photo {
   width: 150px;
   height: 150px;
@@ -64,23 +76,7 @@ header {
   border: 3px solid #0077b5;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  position: relative;
-  z-index: 2;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-top: 0;
-  position: relative;
-  z-index: 2;
-  color: #555;
-}
-
-/* Palabras flotantes alrededor del nombre */
+/* Palabras flotantes */
 .categories-floating {
   position: absolute;
   top: 50%;
@@ -105,34 +101,121 @@ p {
   opacity: 1;
 }
 
-/* Posiciones individuales */
-.fotografia { top: -40px; left: 10%; color: #E63946; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; transform: rotate(-5deg); }
-.videoarte { top: -30px; right: 10%; color: #5B5EA6; font-family: 'Courier Prime', monospace; font-size: 1.4rem; font-weight: 600; transform: rotate(6deg); }
-.documentales { top: 20px; left: 15%; color: #3CB371; font-family: 'Raleway', sans-serif; font-size: 1.3rem; font-weight: 500; transform: rotate(-4deg); }
-.cortometrajes { top: 30px; right: 15%; color: #FF8C00; font-family: 'Abril Fatface', cursive; font-size: 1.7rem; font-weight: 700; transform: rotate(7deg); }
+/* Secciones */
+section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 25px;
+  background-color: #fff; /* fondo de sección */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 40px 25px;
+}
 
-/* SECCIONES */
-section { max-width: 1000px; margin: 80px auto; padding: 0 25px; }
+/* Títulos */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0077b5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-/* Títulos de secciones */
-h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid #0077b5; display: inline-block; padding-bottom: 5px; }
-h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; }
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
 
 /* Galería */
-.gallery { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-.gallery img { width: 30%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; object-fit: cover; }
-.gallery img:hover { transform: scale(1.05); }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 30%;
+  object-fit: cover; /* evita deformaciones */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
 
 /* Videos */
-.videos { display: flex; flex-direction: column; gap: 20px; }
-.videos iframe { width: 100%; height: 300px; border-radius: 8px; }
+.videos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-/* Listas Documentales y Cortometrajes */
-ul { list-style: none; padding: 0; }
-ul li { margin: 10px 0; font-weight: 500; }
-ul li a { color: #0077b5; text-decoration: none; transition: all 0.3s; }
-ul li a:hover { color: #005582; text-decoration: underline; }
+.videos iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+ul li a {
+  color: #0077b5;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+ul li a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+
+/* Ver todos */
+.ver-todos {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.ver-todos a {
+  font-family: 'Raleway', sans-serif; /* letra minimalista */
+  font-weight: 600;
+  text-decoration: none;
+  color: #0077b5;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.ver-todos a::after {
+  content: '→';
+}
+
+.ver-todos a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
 
 /* Footer */
-footer { text-align: center; font-size: 0.9em; color: #777; margin-top: 60px; padding-bottom: 40px; }
-
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 60px;
+  padding: 40px 0 20px;
+}
