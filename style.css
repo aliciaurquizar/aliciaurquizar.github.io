@@ -50,9 +50,7 @@ nav ul li a:hover {
 header {
   text-align: center;
   position: relative;
-  padding: 120px 20px 80px; /* más espacio arriba y abajo */
-  background-color: #f0f4f8; /* color claro profesional */
-  border-bottom: 1px solid #ddd; /* separación suave */
+  padding: 100px 20px 60px;
 }
 
 .hero-photo {
@@ -65,34 +63,30 @@ header {
   border: 3px solid #0077b5;
 }
 
-/* Nombre */
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.8rem;
   margin-bottom: 10px;
   position: relative;
   z-index: 2;
-  color: #1a1a1a; /* color más oscuro para contraste */
 }
 
-/* Frase debajo del nombre */
 p {
-  font-size: 1.2rem;
-  margin-top: 5px;
+  font-size: 1.1rem;
+  margin-top: 0;
   position: relative;
   z-index: 2;
-  color: #555; 
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  color: #555;
 }
+
 /* Palabras flotantes alrededor del nombre */
 .categories-floating {
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 0; /* no ocupa espacio */
+  height: 0;
   pointer-events: none;
   z-index: 1;
 }
@@ -110,154 +104,34 @@ p {
   opacity: 1;
 }
 
-/* Posiciones y estilos individuales */
-.fotografia {
-  top: -40px;
-  left: 10%;
-  color: #E63946;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  transform: rotate(-5deg);
-}
-
-.videoarte {
-  top: -30px;
-  right: 10%;
-  color: #5B5EA6;
-  font-family: 'Courier Prime', monospace;
-  font-size: 1.4rem;
-  font-weight: 600;
-  transform: rotate(6deg);
-}
-
-.documentales {
-  top: 20px;
-  left: 15%;
-  color: #3CB371;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  transform: rotate(-4deg);
-}
-
-.cortometrajes {
-  top: 30px;
-  right: 15%;
-  color: #FF8C00;
-  font-family: 'Abril Fatface', cursive;
-  font-size: 1.7rem;
-  font-weight: 700;
-  transform: rotate(7deg);
-}
+/* Posiciones individuales */
+.fotografia { top: -40px; left: 10%; color: #E63946; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; transform: rotate(-5deg); }
+.videoarte { top: -30px; right: 10%; color: #5B5EA6; font-family: 'Courier Prime', monospace; font-size: 1.4rem; font-weight: 600; transform: rotate(6deg); }
+.documentales { top: 20px; left: 15%; color: #3CB371; font-family: 'Raleway', sans-serif; font-size: 1.3rem; font-weight: 500; transform: rotate(-4deg); }
+.cortometrajes { top: 30px; right: 15%; color: #FF8C00; font-family: 'Abril Fatface', cursive; font-size: 1.7rem; font-weight: 700; transform: rotate(7deg); }
 
 /* SECCIONES */
-section {
-  max-width: 1000px;
-  margin: 80px auto; /* espacio entre secciones */
-  padding: 0 25px;
-}
+section { max-width: 1000px; margin: 80px auto; padding: 0 25px; }
 
 /* Títulos de secciones */
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #0077b5;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
+h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px; border-bottom: 2px solid #0077b5; display: inline-block; padding-bottom: 5px; }
+h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; }
 
 /* Galería */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.gallery img {
-  width: auto;
-  max-width: 30%;
-  height: 200px;         /* altura uniforme */
-  object-fit: cover;     /* mantiene proporción y recorta exceso */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
+.gallery { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+.gallery img { width: 30%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; object-fit: cover; }
+.gallery img:hover { transform: scale(1.05); }
 
 /* Videos */
-.videos {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+.videos { display: flex; flex-direction: column; gap: 20px; }
+.videos iframe { width: 100%; height: 300px; border-radius: 8px; }
 
-.videos iframe {
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
-}
+/* Listas Documentales y Cortometrajes */
+ul { list-style: none; padding: 0; }
+ul li { margin: 10px 0; font-weight: 500; }
+ul li a { color: #0077b5; text-decoration: none; transition: all 0.3s; }
+ul li a:hover { color: #005582; text-decoration: underline; }
 
-/* Listas de Documentales y Cortometrajes */
-ul {
-  list-style: none;
-  padding: 0;
-}
+/* Footer */
+footer { text-align: center; font-size: 0.9em; color: #777; margin-top: 60px; padding-bottom: 40px; }
 
-ul li {
-  margin: 10px 0;
-  font-weight: 500;
-}
-
-ul li a {
-  color: #0077b5;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-ul li a:hover {
-  color: #005582;
-  text-decoration: underline;
-}
-.ver-todos {
-  text-align: right;            /* alinea a la derecha */
-  margin-top: 15px;
-  font-family: 'Raleway', sans-serif; /* tipografía minimalista */
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.ver-todos a {
-  color: #0077b5;
-  text-decoration: none;
-  position: relative;
-  padding-right: 18px; /* espacio para la flecha */
-  transition: all 0.3s;
-}
-
-.ver-todos a::after {
-  content: '→';              /* flecha hacia la derecha */
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s;
-}
-
-.ver-todos a:hover {
-  color: #005582;
-  text-decoration: underline;
-}
-
-.ver-todos a:hover::after {
-  transform: translateY(-50%) translateX(5px); /* flecha se mueve un poco al pasar el ratón */
-}
