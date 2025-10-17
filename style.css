@@ -229,15 +229,28 @@ ul li a:hover {
   text-decoration: underline;
 }
 .ver-todos {
-  text-align: right;
-  margin-top: 10px;
+  text-align: right;            /* alinea a la derecha */
+  margin-top: 15px;
+  font-family: 'Raleway', sans-serif; /* tipografía minimalista */
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .ver-todos a {
   color: #0077b5;
-  font-weight: 600;
   text-decoration: none;
+  position: relative;
+  padding-right: 18px; /* espacio para la flecha */
   transition: all 0.3s;
+}
+
+.ver-todos a::after {
+  content: '→';              /* flecha hacia la derecha */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
 }
 
 .ver-todos a:hover {
@@ -245,13 +258,6 @@ ul li a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #777;
-  margin-top: 60px;
-  padding-bottom: 40px;
+.ver-todos a:hover::after {
+  transform: translateY(-50%) translateX(5px); /* flecha se mueve un poco al pasar el ratón */
 }
-
-
