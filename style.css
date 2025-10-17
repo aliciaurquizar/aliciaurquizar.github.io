@@ -47,17 +47,12 @@ nav ul li a:hover {
 }
 
 /* Secciones */
-header, section, footer {
-  max-width: 1000px;
-  margin: 80px auto 40px;
-  padding: 0 25px;
-}
-
+/* HEADER */
 header {
   text-align: center;
   position: relative;
   margin-top: 130px;
-  padding-bottom: 40px; /* menos espacio */
+  padding-bottom: 0;
 }
 
 .hero-photo {
@@ -75,34 +70,34 @@ h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 p {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* Palabras flotando alrededor del nombre */
 .categories-floating {
   position: absolute;
-  top: 40%; /* centrado verticalmente respecto al nombre */
+  top: 60px; /* ahora más abajo, a la altura del texto */
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 150px;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 180px;
   pointer-events: none;
-  z-index: 1; /* detrás del texto */
+  z-index: 1;
 }
 
+/* Movimiento sutil y colores variados */
 .categories-floating .cat {
   position: absolute;
   text-decoration: none;
   opacity: 0.9;
-  transition: transform 0.4s, opacity 0.4s;
   white-space: nowrap;
-  z-index: 1;
-  pointer-events: auto; /* para hover */
+  animation: floatWords 6s ease-in-out infinite;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .categories-floating .cat:hover {
@@ -110,53 +105,56 @@ p {
   opacity: 1;
 }
 
-
-/* Animación sutil de flotación */
-@keyframes float {
+/* Animación flotante */
+@keyframes floatWords {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
 
-/* Estilos individuales */
+/* Estilos individuales y posiciones irregulares */
 .fotografia {
-  top: -40px;
+  top: 10px;
   left: 5%;
   color: #E63946;
   font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-weight: 700;
   transform: rotate(-5deg);
+  animation-delay: 0s;
 }
 
 .videoarte {
-  top: -30px;
-  right: 8%;
+  top: -10px;
+  right: 5%;
   color: #5B5EA6;
   font-family: 'Courier Prime', monospace;
   font-size: 1.4rem;
   font-weight: 600;
-  transform: rotate(4deg);
+  transform: rotate(6deg);
+  animation-delay: 1s;
 }
 
 .documentales {
-  top: 40px;
-  left: 8%;
+  top: 60px;
+  left: 15%;
   color: #3CB371;
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
+  animation-delay: 2s;
 }
 
 .cortometrajes {
-  top: 50px;
-  right: 10%;
+  top: 70px;
+  right: 15%;
   color: #FF8C00;
   font-family: 'Abril Fatface', cursive;
   font-size: 1.7rem;
   font-weight: 700;
-  transform: rotate(6deg);
+  transform: rotate(7deg);
+  animation-delay: 3s;
 }
 
 
