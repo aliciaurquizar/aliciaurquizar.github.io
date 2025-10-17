@@ -49,14 +49,14 @@ nav ul li a:hover {
 /* Secciones */
 header, section, footer {
   max-width: 1000px;
-  margin: 80px auto 40px; /* margen superior para navbar */
+  margin: 80px auto 40px;
   padding: 0 25px;
 }
 
 header {
   text-align: center;
   position: relative;
-  padding-bottom: 120px; /* espacio para las palabras alrededor */
+  margin-top: 120px;
 }
 
 .hero-photo {
@@ -90,7 +90,63 @@ h3 {
   margin-top: 20px;
 }
 
-/* Galería de fotos */
+/* Palabras artísticas alrededor del texto */
+.categories-floating {
+  position: relative;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.categories-floating .cat {
+  position: absolute;
+  text-decoration: none;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.9;
+}
+
+.categories-floating .cat:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* Cada palabra con color y tipografía distinta */
+.fotografia {
+  top: -70px;
+  left: 10%;
+  color: #E63946;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.videoarte {
+  top: -90px;
+  right: 18%;
+  color: #5B5EA6;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.documentales {
+  bottom: -50px;
+  left: 15%;
+  color: #3CB371;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.cortometrajes {
+  bottom: -70px;
+  right: 10%;
+  color: #FF8C00;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Galería */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -122,28 +178,6 @@ h3 {
   border-radius: 8px;
 }
 
-/* Listas de Documentales y Cortometrajes */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 10px 0;
-  font-weight: 500;
-}
-
-ul li a {
-  color: #0077b5;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-ul li a:hover {
-  color: #005582;
-  text-decoration: underline;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -152,64 +186,3 @@ footer {
   margin-top: 60px;
 }
 
-/* Colores por sección */
-#fotografia h3 { color: #FF6F61; }
-#videoarte h3 { color: #6B5B95; }
-#documentales h3 { color: #88B04B; }
-#cortometrajes h3 { color: #FFA500; }
-
-/* Categorías flotantes alrededor del nombre */
-.categories-wrapper {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-}
-
-.categories-wrapper .cat {
-  position: absolute;
-  padding: 6px 14px;
-  border-radius: 12px;
-  font-weight: 600;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  transition: transform 0.3s;
-  text-decoration: none;
-}
-
-.categories-wrapper .cat:hover {
-  transform: scale(1.2);
-}
-
-/* Posiciones circulares alrededor de la foto */
-.fotografia {
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #FF6F61;
-  font-size: 1rem;
-}
-
-.videoarte {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background-color: #6B5B95;
-  font-size: 1.1rem;
-}
-
-.documentales {
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #88B04B;
-  font-size: 0.9rem;
-}
-
-.cortometrajes {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFA500;
-  font-size: 1rem;
-}
