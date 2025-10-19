@@ -65,66 +65,67 @@ header p {
   margin-top: 0;
 }
 
-/* Hero photo */
-.hero-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px;
-  border: 3px solid #0077b5;
+/* Header */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 120px;
+  background-color: #eef2f5;
+  overflow: hidden;
+}
+
+.hero .intro {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Palabras flotantes */
 .categories-floating {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
-/* Cada palabra se posiciona alrededor de la foto */
 .categories-floating .cat {
   position: absolute;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #0077b5;
-  opacity: 0.85;
+  opacity: 0.9;
   transition: transform 0.3s, opacity 0.3s;
-}
-
-/* Posiciones fijas alrededor del retrato */
-.cat.fotografia {
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cat.videoarte {
-  top: 30%;
-  right: -80px;
-  transform: translateY(-50%);
-}
-
-.cat.documentales {
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cat.cortometrajes {
-  top: 30%;
-  left: -100px;
-  transform: translateY(-50%);
+  white-space: nowrap;
 }
 
 .categories-floating .cat:hover {
   transform: scale(1.15);
   opacity: 1;
-  color: #005582;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .categories-floating .cat {
+    font-size: 0.9rem !important;
+  }
+  .hero {
+    padding: 120px 10px 100px;
+  }
 }
 
 /* Responsive: cuando la pantalla es pequeña, que se coloquen en línea */
