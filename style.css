@@ -46,37 +46,15 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-<!-- Header -->
-<header class="hero">
-  <img src="img/fotoperfil.jpg" alt="Foto de Alicia" class="hero-photo">
-
-  <div class="intro">
-    <h1>¡Hola! Soy Alicia Urquízar Rodríguez</h1>
-    <p>PROYECTOS AUDIOVISUALES</p>
-  </div>
-
-  <div class="categories-floating">
-    <span class="cat" style="top: 5%; left: 10%; color: #6b9fff; font-family: 'Raleway'; font-size: 1.2rem;">Fotografía</span>
-    <span class="cat" style="top: 25%; right: 5%; color: #ff8b8b; font-family: 'Playfair Display'; font-size: 1.4rem;">Videoarte</span>
-    <span class="cat" style="top: 60%; left: 8%; color: #7ed957; font-family: 'Courier Prime'; font-size: 1.1rem;">Documentales</span>
-    <span class="cat" style="bottom: 15%; right: 12%; color: #ffb347; font-family: 'Raleway'; font-size: 1.3rem;">Cortometrajes</span>
-    <span class="cat" style="top: 70%; right: 40%; color: #b38bfa; font-family: 'Abril Fatface'; font-size: 1.2rem;">3D / Animación</span>
-    <span class="cat" style="bottom: 5%; left: 35%; color: #6ac7b7; font-family: 'Playfair Display'; font-size: 1.1rem;">Arte digital</span>
-    <span class="cat" style="top: 45%; left: 80%; color: #f5a9c4; font-family: 'Raleway'; font-size: 1.2rem;">Collage</span>
-  </div>
-</header>
-
-
-/* Header principal */
+/* === HEADER NUEVO === */
 .hero {
   position: relative;
   text-align: center;
-  padding: 140px 20px 140px;
+  padding: 160px 20px 160px;
   background-color: #eef2f5;
   overflow: hidden;
 }
 
-/* Foto de perfil */
 .hero-photo {
   width: 160px;
   height: 160px;
@@ -88,7 +66,6 @@ nav ul li a:hover {
   z-index: 2;
 }
 
-/* Texto */
 .hero .intro {
   position: relative;
   z-index: 2;
