@@ -78,27 +78,71 @@ header p {
 
 /* Palabras flotantes */
 .categories-floating {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   height: 0;
-  pointer-events: none;
-  z-index: 1;
 }
 
+/* Cada palabra se posiciona alrededor de la foto */
 .categories-floating .cat {
   position: absolute;
-  text-decoration: none;
-  opacity: 0.9;
-  white-space: nowrap;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0077b5;
+  opacity: 0.85;
   transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Posiciones fijas alrededor del retrato */
+.cat.fotografia {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cat.videoarte {
+  top: 30%;
+  right: -80px;
+  transform: translateY(-50%);
+}
+
+.cat.documentales {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cat.cortometrajes {
+  top: 30%;
+  left: -100px;
+  transform: translateY(-50%);
 }
 
 .categories-floating .cat:hover {
   transform: scale(1.15);
   opacity: 1;
+  color: #005582;
+}
+
+/* Responsive: cuando la pantalla es pequeña, que se coloquen en línea */
+@media (max-width: 700px) {
+  .categories-floating {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .categories-floating .cat {
+    position: static;
+    transform: none;
+  }
 }
 
 /* Secciones */
