@@ -87,38 +87,36 @@ nav ul li a:hover {
 }
 
 .categories-bar {
-  background-color: white;
+  background-color: white; /* franja blanca */
   margin-top: 40px;
   padding: 15px 0;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px; /* espacio entre categorías */
   border-radius: 0 0 15px 15px;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
-.categories-bar span {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
+.categories-bar a {
+  font-family: 'Raleway', sans-serif; /* tipografía minimalista y elegante */
+  font-weight: 500;
   font-size: 1.1rem;
   color: #0077b5;
+  text-decoration: none;
   position: relative;
-  cursor: default;
   transition: color 0.3s, transform 0.3s;
 }
 
-.categories-bar span:hover {
+.categories-bar a:hover {
   color: #005582;
   transform: translateY(-2px);
 }
 
-.categories-bar span:not(:last-child)::after {
-  content: "·";
+.categories-bar a:not(:last-child)::after {
+  content: "·"; /* separador minimalista */
   color: #ccc;
   margin-left: 30px;
 }
-
-
 
 /* Secciones */
 section {
