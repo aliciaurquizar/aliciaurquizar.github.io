@@ -112,8 +112,8 @@ nav ul li a:hover {
 
 /* ==== POSICIONES MANUALES (sin solaparse) ==== */
 .cat.fotografia {
-  top: 15%;
-  left: 8%;
+  top: 40%;
+  left: 15%;
   color: #6b9fff;
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
@@ -121,7 +121,7 @@ nav ul li a:hover {
 
 .cat.videoarte {
   top: 30%;
-  right: 10%;
+  right: 40%;
   color: #ff8b8b;
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
@@ -137,7 +137,7 @@ nav ul li a:hover {
 
 .cat.cortometrajes {
   bottom: 15%;
-  right: 15%;
+  right: 30%;
   color: #ffb347;
   font-family: 'Raleway', sans-serif;
   font-size: 1.3rem;
