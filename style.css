@@ -46,7 +46,7 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* === HEADER NUEVO === */
+/* ==== HEADER ==== */
 .hero {
   position: relative;
   text-align: center;
@@ -86,7 +86,7 @@ nav ul li a:hover {
   letter-spacing: 1px;
 }
 
-/* Palabras flotantes */
+/* ==== PALABRAS FLOTANTES ==== */
 .categories-floating {
   position: absolute;
   top: 0;
@@ -97,22 +97,64 @@ nav ul li a:hover {
   z-index: 1;
 }
 
-.categories-floating .cat {
+.cat {
   position: absolute;
   opacity: 0.9;
   transition: transform 0.4s ease, opacity 0.4s ease;
   white-space: nowrap;
+  font-weight: 600;
 }
 
-.categories-floating .cat:hover {
+.cat:hover {
   transform: scale(1.15);
   opacity: 1;
 }
 
-/* Responsive */
+/* ==== POSICIONES MANUALES (sin solaparse) ==== */
+.cat.fotografia {
+  top: 15%;
+  left: 8%;
+  color: #6b9fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+}
+
+.cat.videoarte {
+  top: 30%;
+  right: 10%;
+  color: #ff8b8b;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+}
+
+.cat.documentales {
+  bottom: 25%;
+  left: 12%;
+  color: #7ed957;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.2rem;
+}
+
+.cat.cortometrajes {
+  bottom: 15%;
+  right: 15%;
+  color: #ffb347;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+}
+
+.cat.animacion {
+  top: 55%;
+  left: 75%;
+  color: #b38bfa;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.2rem;
+}
+
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-  .categories-floating .cat {
-    font-size: 0.9rem !important;
+  .cat {
+    font-size: 1rem !important;
   }
   .hero {
     padding: 120px 10px 100px;
