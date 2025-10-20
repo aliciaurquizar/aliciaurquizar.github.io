@@ -59,3 +59,75 @@ header.simple-hero p {
     font-size: 0.95rem;
   }
 }
+/* ===== SECCIÓN HABILIDADES Y HERRAMIENTAS ===== */
+.skills-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.skills-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #0077b5;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid #0077b5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Contenedor de cada grupo */
+.skill-group {
+  margin-top: 30px;
+}
+
+.skill-group h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Contenedor de cajitas */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Cada cajita individual */
+.skills .skill {
+  background-color: #ffffff;
+  border: 2px solid #0077b5;
+  color: #0077b5;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: center;
+  min-width: 120px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: default;
+}
+
+.skills .skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background-color: #eef2f5;
+}
+
+/* Ajuste móvil */
+@media (max-width: 700px) {
+  .skills {
+    gap: 10px;
+  }
+  .skills .skill {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+}
