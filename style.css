@@ -10,11 +10,7 @@ body {
 }
 
 /* Subpáginas: tipografía y color de nav */
-body.subpage nav ul li a {
-  font-family: 'Playfair Display', serif; /* nueva tipografía */
-  font-weight: 700;
-  color: #333333; /* asegurar gris oscuro */
-}
+
 /* ===== NAV UNIFICADO PARA TODAS LAS PÁGINAS ===== */
 nav.main-nav, nav {
   background: #ffffff;
