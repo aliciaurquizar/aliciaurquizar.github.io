@@ -408,50 +408,64 @@ header.simple-hero h1 {
   margin: 0 auto;
 }
 
-/* Galería tipo collage */
-#fotografia .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-auto-rows: 180px; /* altura base para filas */
-  gap: 10px;
-  margin-top: 40px;
+/* Título de la página Fotografía */
+header.simple-hero {
+  text-align: center;
+  padding: 160px 20px 40px;
 }
 
-/* Cada imagen se ajusta al collage */
+header.simple-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #0077b5;
+  margin: 0 auto;
+}
+
+/* Collage libre */
+#fotografia .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
 #fotografia .gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* Hover para efecto de ampliación */
+/* Efecto aleatorio de tamaño para collage */
+#fotografia .gallery img:nth-child(odd) {
+  max-width: 350px;
+  transform: rotate(-2deg);
+}
+
+#fotografia .gallery img:nth-child(even) {
+  max-width: 280px;
+  transform: rotate(1deg);
+}
+
 #fotografia .gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Alternar alturas para efecto collage */
-#fotografia .gallery img:nth-child(3n) {
-  grid-row: span 2; /* cada tercera imagen ocupa 2 filas */
-}
-
-#fotografia .gallery img:nth-child(4n) {
-  grid-row: span 3; /* cada cuarta imagen ocupa 3 filas */
+  transform: scale(1.05) rotate(0deg);
 }
 
 @media (max-width: 700px) {
-  #fotografia .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    grid-auto-rows: 140px;
+  .back-arrow {
+    top: 60px;
+    font-size: 1rem;
   }
-  #fotografia .gallery img:nth-child(3n),
-  #fotografia .gallery img:nth-child(4n) {
-    grid-row: span 1; /* en móvil todas igual tamaño */
+  #fotografia .gallery img {
+    max-width: 90%;
+    transform: rotate(0deg);
   }
 }
-
 
 /* Footer */
 footer {
@@ -465,23 +479,20 @@ footer {
 /* Flecha de retroceso */
 .back-arrow {
   display: inline-block;
-  margin: 100px 0 20px 20px; /* separada del nav y del contenido */
+  margin: 100px 0 20px 25px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   color: #0077b5;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s, transform 0.2s;
+  position: fixed;
+  top: 80px; /* justo debajo del nav */
+  left: 20px;
+  z-index: 1000;
 }
 
 .back-arrow:hover {
   color: #005582;
   transform: translateX(-3px);
 }
-
-@media (max-width: 700px) {
-  .back-arrow {
-    margin: 120px 0 20px 20px; /* ajusta la separación para móvil */
-  }
-}
-
