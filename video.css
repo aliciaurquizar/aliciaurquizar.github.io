@@ -1,0 +1,22 @@
+.videos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.videos iframe {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  .videos iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
