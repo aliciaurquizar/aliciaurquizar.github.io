@@ -1,119 +1,110 @@
-/* ===== GENERAL ===== */
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-/* ===== NAVBAR ===== */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #ddd;
-  z-index: 1000;
-  padding: 12px 30px;
-  box-sizing: border-box;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-nav ul {
+/* ===== HERO INICIO ===== */
+.hero .categories-bar {
+  background-color: white;
+  margin-top: 40px;
+  padding: 15px 0;
   display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
-nav ul li {
-  margin-left: 25px;
-}
-
-nav ul li a {
-  text-decoration: none;
+.hero .categories-bar a {
+  font-weight: 500;
+  font-size: 1.1rem;
   color: #0077b5;
-  font-weight: 600;
-  transition: all 0.3s;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
 }
 
-nav ul li a:hover {
+.hero .categories-bar a:hover {
   color: #005582;
   transform: translateY(-2px);
 }
 
-/* ===== CONTACTO ===== */
-#contact {
-  background: #ffffff;
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 40px 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.hero .categories-bar a:not(:last-child)::after {
+  content: "·";
+  color: #ccc;
+  margin-left: 30px;
+}
+
+/* ===== PROYECTOS DESTACADOS ===== */
+#projects h3 {
   text-align: center;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-#contact h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+/* ===== VER TODOS ===== */
+.ver-todos {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.ver-todos a {
+  font-weight: 600;
+  text-decoration: none;
   color: #0077b5;
-  margin-bottom: 25px;
-  border: none;
-}
-
-#contact p {
-  font-family: 'Raleway', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-size: 1rem;
-  color: #444;
-  margin: 12px 0;
+  transition: all 0.3s;
 }
 
-#contact a {
+.ver-todos a::after {
+  content: '→';
+}
+
+.ver-todos a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
+
+/* ===== BACK ARROW ===== */
+.back-arrow {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
   color: #0077b5;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: color 0.3s, transform 0.3s;
 }
 
-#contact a:hover {
+body.subpage .back-arrow {
+  display: inline-block;
+}
+
+.back-arrow:hover {
   color: #005582;
+  transform: translateX(-3px);
 }
 
-/* ===== ICONOS CONTACTO ===== */
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.contact-icons a {
-  font-size: 1.8rem;
-  color: #0077b5;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.contact-icons a:hover {
-  color: #005582;
-  transform: scale(1.2);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #777;
-  margin-top: 60px;
-  padding: 40px 0 20px;
-}
-
-/* ===== MEDIA QUERIES GENERALES ===== */
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 700px) {
-  body {
-    font-size: 14px;
+  #videoarte .gallery figure img,
+  .gallery figure img {
+    height: 150px;
+  }
+
+  .videos iframe {
+    height: 220px;
+  }
+
+  .hero .intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero .intro p {
+    font-size: 1rem;
   }
 }
