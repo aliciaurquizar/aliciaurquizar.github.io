@@ -1,111 +1,82 @@
-/* ===== HEADER SOBRE MÍ ===== */
-header.simple-hero {
-  padding: 120px 20px 80px;
+/* ===== HEADER / HERO ===== */
+.simple-hero {
   text-align: center;
-  background-color: #eef2f5;
+  padding: 120px 20px 60px; /* más espacio arriba y abajo */
+  background-color: #eef2f5; /* color de fondo suave */
+  border-radius: 0 0 20px 20px;
 }
 
-header.simple-hero h1 {
+.simple-hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  color: #0077b5;
+  font-size: 3rem;         /* más grande y elegante */
   margin-bottom: 15px;
+  color: #0077b5;          /* azul corporativo */
 }
 
-header.simple-hero p {
+.simple-hero p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  color: #555;
-  margin-top: 0;
+  color: #333;             /* texto oscuro y legible */
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
 
-/* ===== FOTO SOBRE MÍ ===== */
 .simple-hero-photo {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #0077b5;
-  margin: 20px auto;
-  display: block;
+  border: 3px solid #0077b5; /* borde azul elegante */
+  margin-top: 20px;
 }
 
 /* ===== SECCIÓN SOBRE MÍ ===== */
 #about-me {
   max-width: 800px;
   margin: 40px auto;
-  padding: 20px;
   font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #444;
   line-height: 1.6;
+  padding: 0 20px;
   text-align: center;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  header.simple-hero h1 {
-    font-size: 2.2rem;
-  }
-  header.simple-hero p {
-    font-size: 1rem;
-  }
-  .simple-hero-photo {
-    width: 140px;
-    height: 140px;
-  }
-  #about-me {
-    padding: 15px;
-    font-size: 0.95rem;
-  }
-}
-/* ===== SECCIÓN HABILIDADES Y HERRAMIENTAS ===== */
-.skills-section {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
-}
-
+/* ===== HABILIDADES ===== */
 .skills-section h2 {
+  text-align: center;
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   color: #0077b5;
-  margin-bottom: 25px;
-  text-align: center;
-  border-bottom: 2px solid #0077b5;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-/* Contenedor de cada grupo */
-.skill-group {
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .skill-group h3 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.5rem;
-  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #222;
   margin-bottom: 15px;
   text-align: center;
 }
 
-/* Contenedor de cajitas */
 .skills {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 15px;
+  margin-bottom: 30px;
 }
 
-/* Cada cajita individual */
-.skills .skill {
+.skill {
   background-color: #ffffff;
   border: 2px solid #0077b5;
   color: #0077b5;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  padding: 12px 20px;
+  padding: 15px 20px;
   border-radius: 12px;
   font-size: 1rem;
   text-align: center;
@@ -114,19 +85,32 @@ header.simple-hero p {
   cursor: default;
 }
 
-.skills .skill:hover {
+.skill:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
   background-color: #eef2f5;
 }
 
-/* Ajuste móvil */
+/* ===== MEDIA QUERIES ===== */
 @media (max-width: 700px) {
-  .skills {
-    gap: 10px;
+  .simple-hero {
+    padding: 80px 15px 40px;
   }
-  .skills .skill {
-    padding: 10px 15px;
+
+  .simple-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .simple-hero p {
+    font-size: 1rem;
+  }
+
+  .skills {
+    gap: 12px;
+  }
+
+  .skill {
+    padding: 12px 15px;
     font-size: 0.9rem;
     min-width: 100px;
   }
