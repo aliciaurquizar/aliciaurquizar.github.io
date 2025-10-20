@@ -24,36 +24,51 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255,255,255,0.95);
+  background-color: #ffffff; /* fondo blanco profesional */
   border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   z-index: 1000;
   padding: 12px 30px;
   display: flex;
   justify-content: flex-end;
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  align-items: center;
+  font-family: 'Raleway', sans-serif; /* tipografía profesional y minimalista */
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  list-style: none;
   margin: 0;
   padding: 0;
+  gap: 25px;
 }
 
 nav ul li a {
   text-decoration: none;
+  color: #0077b5; /* azul elegante */
   font-weight: 600;
   font-size: 1rem;
-  color: #222;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-  color: #0077b5;
+  color: #005582;
   transform: translateY(-2px);
 }
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 700px) {
+  nav {
+    padding: 10px 20px;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  nav ul li a {
+    font-size: 0.95rem;
+  }
+}
+
 
 /* ===== FLECHA DE VOLVER PARA SUBPÁGINAS ===== */
 body.subpage .back-arrow {
