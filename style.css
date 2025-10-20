@@ -1,18 +1,8 @@
-/* ====== style.css (REEMPLAZA COMPLETO) ====== */
-
 /* ===== GENERAL ===== */
-:root{
-  --blue:#0077b5;
-  --blue-dark:#005582;
-  --muted:#f4f6f8;
-  --card:#ffffff;
-  --text:#333;
-}
-*{box-sizing:border-box}
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9f9;
-  color: var(--text);
+  color: #333;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -20,194 +10,327 @@ body {
 }
 
 /* ===== NAVBAR ===== */
-nav{
+nav {
   position: fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1500;
-  background: rgba(255,255,255,0.98);
-  border-bottom:1px solid #e6e6e6;
-  padding:12px 28px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.03);
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  padding: 12px 30px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-nav ul{display:flex;justify-content:flex-end;gap:22px;margin:0;padding:0;list-style:none}
-nav a{color:var(--blue);text-decoration:none;font-weight:600;transition:color .2s,transform .15s}
-nav a:hover{color:var(--blue-dark);transform:translateY(-2px)}
 
-/* ===== HERO (inicio): fondo azul y franja blanca de categorías ===== */
-header.hero{
-  background: var(--blue);
-  color: #fff;
-  text-align:center;
-  padding: 110px 20px 20px; /* suficiente espacio arriba para navbar */
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  color: #005582;
+  transform: translateY(-2px);
+}
+
+/* ===== HEADER GENERAL ===== */
+.hero {
   position: relative;
-  overflow: visible;
-}
-header.hero .intro{max-width:1100px;margin:0 auto;padding:0 20px}
-header.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:2.6rem;
-  margin:0 0 8px;
-  line-height:1.05;
-}
-header.hero p{
-  font-family:'Raleway',sans-serif;
-  font-size:1.05rem;
-  margin:0;
-  letter-spacing:1px;
-  opacity:0.95;
+  text-align: center;
+  padding: 80px 20px 80px;
+  background-color: #eef2f5;
+  overflow: hidden;
 }
 
-/* franja blanca inferior con categorías (si la quieres igual) */
-.categories-bar{
-  background:#fff;
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077b5;
+  margin-bottom: 25px;
   position: relative;
-  margin-top: 28px;
-  padding: 12px 0;
-  display:flex;
-  justify-content:center;
-  gap:48px;
-  border-radius:0 0 12px 12px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
+  z-index: 2;
 }
-.categories-bar a{color:#222;font-family:'Raleway',sans-serif;font-weight:600;font-size:1rem}
-.categories-bar a:hover{color:var(--blue)}
 
-/* ===== SUBPÁGINA HERO (ej: fotografia, animacion) =====
-   Usa <header class="simple-hero"> en las subpáginas.
-*/
-header.simple-hero{
-  background: var(--blue);
-  color:#fff;
-  text-align:center;
-  padding: 140px 20px 40px; /* título más centrado verticalmente */
+/* ===== SUBPÁGINAS (Fotografía / Animación / etc.) ===== */
+header.simple-hero {
+  padding: 160px 20px 70px;
+  text-align: center;
+  background-color: #eef2f5;
 }
-header.simple-hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:2.8rem;
-  margin:0;
-  color:#fff;
+
+header.simple-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #0077b5;
+  margin: 0 auto;
 }
 
 /* ===== SECCIONES ===== */
-section{
-  max-width:1000px;
+section {
+  max-width: 1000px;
   margin: 80px auto;
-  padding: 36px 24px;
-  background: var(--card);
-  border-radius:12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  padding: 40px 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* h2 general */
-h2{
-  font-family:'Playfair Display',serif;
-  font-size:2rem;
-  color:var(--text);
-  margin:0 0 18px;
-  display:inline-block;
-  border-bottom:2px solid var(--blue);
-  padding-bottom:6px;
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0077b5;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-/* ===== Proyectos: títulos centrados ===== */
-#projects h3, section h3{
-  text-align:center;
-  font-family:'Playfair Display',serif;
-  font-size:1.6rem;
-  margin:28px 0 18px;
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
-/* ===== GALERÍA GENERAL (figuras/card) ===== */
-.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:12px}
-
-/* Figura-card por defecto (usada en index y páginas) */
-.gallery figure{
-  width:280px;
-  margin:0;
-  background:#fff;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 6px 18px rgba(0,0,0,0.04);
-  transition:transform .22s, box-shadow .22s;
-  text-align:center;
+#projects h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
-.gallery figure:hover{transform:translateY(-6px);box-shadow:0 10px 26px rgba(0,0,0,0.08)}
-.gallery figure img{width:100%;height:200px;object-fit:cover;display:block}
-.gallery figcaption{font-family:'Raleway',sans-serif;font-size:.95rem;color:#444;padding:12px;background:#fafafa;border-top:1px solid #eee}
 
-/* ===== PÁGINA FOTOGRAFÍA: grid ordenado (uniforma tamaños) =====
-   Usa <section id="fotografia"> para esta página. Mantiene fotos del mismo tamaño.
-*/
-#fotografia .gallery{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap:18px;
-  margin-top:26px;
+/* ===== GALERÍA (para index) ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
 }
-#fotografia .gallery figure{background:transparent;box-shadow:none;border-radius:10px}
-#fotografia .gallery figure img{height:180px;border-radius:10px}
-#fotografia .gallery figcaption{background:transparent;border-top:none;padding:8px;color:#555}
 
-/* ===== PÁGINA ANIMACIÓN: grid ordenado y evita solapamiento =====
-   Usa <section id="animacion"> para esa subpágina.
-*/
-#animacion .gallery{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap:18px;
-  margin-top:26px;
-  align-items:start;
+.gallery figure {
+  width: 280px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
 }
-#animacion .gallery img{width:100%;height:200px;object-fit:cover;border-radius:10px;display:block}
 
-/* ===== VIDEOS ===== */
-.videos{display:flex;flex-direction:column;gap:18px;margin-top:12px}
-.videos iframe{width:100%;height:320px;border-radius:10px}
-
-/* ===== VER TODOS (estético) ===== */
-.ver-todos{text-align:right;margin-top:12px}
-.ver-todos a{
-  font-family:'Raleway',sans-serif;
-  font-weight:600;color:var(--blue);text-decoration:none;display:inline-flex;gap:8px;align-items:center;
+.gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
-.ver-todos a::after{content:"→";margin-left:6px}
-.ver-todos a:hover{color:var(--blue-dark)}
 
-/* ===== MODAL DE IMAGEN (ampliar) ===== */
-.image-modal{display:none;position:fixed;z-index:2500;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.92);padding:40px;overflow:auto}
-.image-modal .modal-content{max-width:1100px;width:100%;height:auto;display:block;margin:40px auto;border-radius:8px;box-shadow:0 12px 30px rgba(0,0,0,0.5)}
-.image-modal .close{position:fixed;top:28px;right:30px;color:#fff;font-size:42px;font-weight:700;cursor:pointer}
-#caption{color:#ddd;text-align:center;margin-top:14px;font-family:'Raleway',sans-serif;font-size:1rem}
+.gallery figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
 
-/* ===== ABOUT / PERFIL ===== */
-.about-page{max-width:900px;margin:60px auto;padding:36px;border-radius:12px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
-.about-content{display:flex;gap:26px;align-items:center}
-.about-photo{width:200px;height:200px;object-fit:cover;border-radius:50%;border:3px solid var(--blue)}
-@media (max-width:800px){.about-content{flex-direction:column;text-align:center}.about-photo{margin:0 auto}}
+.gallery figure img:hover {
+  transform: scale(1.03);
+}
 
-/* ===== CONTACTO (mejorado; no toca hero) ===== */
-#contact{background:#fff;max-width:700px;margin:80px auto;padding:44px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.05);text-align:center}
-#contact h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--blue);margin-bottom:8px;border:none}
-.contact-icons{display:flex;justify-content:center;gap:28px;margin:24px 0}
-.contact-icons a{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#f5f8fb;color:var(--blue);font-size:1.6rem;box-shadow:0 6px 18px rgba(0,0,0,0.04);text-decoration:none;transition:transform .18s,background .18s,color .18s}
-.contact-icons a:hover{background:var(--blue);color:#fff;transform:scale(1.08)}
-.contact-text{font-family:'Raleway',sans-serif;color:#444;margin-top:12px}
+.gallery figcaption {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 12px;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
 
-/* ===== BACK ARROW (visible solo si agregas <a class="back-arrow"...> en HTML) ===== */
-.back-arrow{position:fixed;left:18px;top:94px;z-index:2600;background:#fff;padding:8px 10px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.08);color:var(--blue);text-decoration:none;font-weight:600}
-.back-arrow:hover{color:var(--blue-dark);transform:translateX(-4px)}
+/* ===== FOTOGRAFÍA ===== */
+#fotografia .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
 
-/* ===== UTILS ===== */
-.container{max-width:1100px;margin:0 auto;padding:0 18px}
-.hidden{display:none}
+#fotografia .gallery figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* responsive tweaks */
-@media (max-width:700px){
-  header.hero{padding:90px 12px 18px}
-  header.simple-hero{padding:120px 12px 30px}
-  nav ul{gap:12px;padding-right:8px}
-  .categories-bar{gap:18px;padding:10px 6px}
-  .gallery figure{width:46%}
+#fotografia .gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+#fotografia .gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#fotografia .gallery img:hover {
+  transform: scale(1.05);
+}
+
+#fotografia figcaption {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 10px;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* ===== ANIMACIÓN ===== */
+#animacion .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+#animacion .gallery figure {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#animacion .gallery figure:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+#animacion .gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+#animacion .gallery figcaption {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 10px;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+/* ===== FLECHA DE VOLVER ===== */
+.back-arrow {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Muestra la flecha solo en subpáginas */
+body.subpage .back-arrow {
+  display: inline-block;
+}
+
+.back-arrow:hover {
+  color: #005582;
+  transform: translateX(-3px);
+}
+
+/* ===== CONTACTO ===== */
+#contact {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+#contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #0077b5;
+  margin-bottom: 25px;
+  border: none;
+}
+
+#contact p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin: 12px 0;
+}
+
+#contact a {
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #005582;
+}
+
+/* ===== ICONOS CONTACTO ===== */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  font-size: 1.8rem;
+  color: #0077b5;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #005582;
+  transform: scale(1.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 60px;
+  padding: 40px 0 20px;
 }
