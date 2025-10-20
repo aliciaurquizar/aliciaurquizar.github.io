@@ -9,6 +9,17 @@ body {
   scroll-behavior: smooth;
 }
 
+body.subpage nav ul li a {
+  font-family: 'Playfair Display', serif; /* nueva tipografía */
+  color: #d35400; /* color distinto */
+  font-weight: 700;
+}
+
+body.subpage nav ul li a:hover {
+  color: #e67e22;
+}
+
+
 /* ===== NAVBAR ===== */
 nav {
   position: fixed;
