@@ -226,6 +226,29 @@ ul li a:hover {
   color: #005582;
   text-decoration: underline;
 }
+figure {
+  width: 30%;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.video-item {
+  margin-bottom: 25px;
+}
+
+.video-role {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-top: 8px;
+  font-family: 'Raleway', sans-serif;
+}
 
 /* Footer */
 footer {
