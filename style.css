@@ -219,12 +219,15 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center; /* centra los videos */
 }
 
 .videos iframe {
   width: 100%;
+  max-width: 600px; /* limita tamaño máximo */
   aspect-ratio: 16/9; /* mantiene proporción panorámica */
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* ===== VER TODOS ===== */
