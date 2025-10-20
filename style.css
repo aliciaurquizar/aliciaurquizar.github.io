@@ -484,20 +484,25 @@ footer {
 
 /* ===== FLECHA DE VOLVER ===== */
 .back-arrow {
-  display: none; /* visible solo en subpáginas vía JS o body class */
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   color: #0077b5;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   transition: color 0.3s, transform 0.2s;
   position: fixed;
-  top: 80px;
+  top: 100px;  /* Ajusta según navbar */
   left: 20px;
   z-index: 1000;
+  background: rgba(255,255,255,0.9);
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .back-arrow:hover {
   color: #005582;
   transform: translateX(-3px);
 }
+
