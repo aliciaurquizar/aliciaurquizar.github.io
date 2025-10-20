@@ -86,20 +86,26 @@
   modal.addEventListener("click", e => {
     if(e.target === modal) modal.style.display = "none";
   });
-  const backArrow = document.querySelector('.back-arrow');
+ const backArrow = document.querySelector('.back-arrow');
 const scrollTopBtn = document.querySelector('.scroll-top');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
-  // Mostrar flecha de inicio solo arriba (ej. primeros 100px)
+  // Mostrar flecha de inicio solo arriba
   if(scrollY < 100) {
-    backArrow.style.display = 'inline-block';
-    scrollTopBtn.style.display = 'none';
+    backArrow.classList.add('visible');
+    scrollTopBtn.classList.remove('visible');
   } else {
-    backArrow.style.display = 'none';
-    scrollTopBtn.style.display = 'flex';
+    backArrow.classList.remove('visible');
+    scrollTopBtn.classList.add('visible');
   }
+});
+
+// Scroll suave para "Subir arriba"
+scrollTopBtn.addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Acción de subir arriba
