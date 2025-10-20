@@ -549,54 +549,60 @@ footer {
 }
 
 
-/* ==== CONTACTO ESTILIZADO ==== */
+/* ==== SECCIÓN DE CONTACTO ==== */
 #contact {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
-  margin-top: 100px;
 }
 
-.contact-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 25px;
+#contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #0077b5;
+  margin-bottom: 25px;
+  border: none; /* quita la línea inferior azul */
 }
 
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+#contact p {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #444;
+  margin: 12px 0;
+}
+
+#contact a {
   color: #0077b5;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.contact-link:hover {
-  transform: translateY(-3px);
+#contact a:hover {
   color: #005582;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  filter: invert(36%) sepia(95%) saturate(1053%) hue-rotate(178deg) brightness(93%) contrast(89%);
-  transition: transform 0.3s ease;
+/* ==== ICONOS DE CONTACTO ==== */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
 }
 
-.contact-link:hover .icon {
-  transform: scale(1.1);
+.contact-icons a {
+  font-size: 1.6rem;
+  color: #0077b5;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .contact-link {
-    font-size: 1rem;
-  }
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
+.contact-icons a:hover {
+  color: #005582;
+  transform: scale(1.2);
 }
+
 
