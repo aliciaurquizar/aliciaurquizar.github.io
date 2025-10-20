@@ -83,6 +83,14 @@
   modal.addEventListener("click", e => {
     if(e.target === modal) modal.style.display = "none";
   });
+  const scrollTopBtn = document.querySelector('.scroll-top');
+scrollTopBtn.addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 </script>
 <a href="#" class="scroll-top" title="Volver arriba">↑</a>
 
