@@ -66,6 +66,19 @@ nav ul li a:hover {
   z-index: 2;
 }
 
+/* Header de las subpáginas (Fotografía, Animación, etc.) */
+header.simple-hero {
+  padding: 150px 20px 60px; /* menos espacio arriba, título más centrado verticalmente */
+  text-align: center;
+}
+
+header.simple-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #0077b5;
+  margin: 0 auto;
+}
+
 .hero .intro {
   position: relative;
   z-index: 2;
