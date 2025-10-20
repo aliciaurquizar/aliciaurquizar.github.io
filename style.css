@@ -270,30 +270,30 @@ body.subpage .back-arrow {
   transform: translateX(-3px);
 }
 
-/* ===== CONTACTO ===== */
+/* ==== SECCIÓN DE CONTACTO ==== */
 #contact {
   background: #ffffff;
   max-width: 700px;
-  margin: 60px auto;
-  padding: 40px 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 80px auto;
+  padding: 60px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
 #contact h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #0077b5;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   border: none;
 }
 
 #contact p {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
-  color: #444;
-  margin: 12px 0;
+  color: #555;
+  margin: 10px 0;
 }
 
 #contact a {
@@ -307,23 +307,41 @@ body.subpage .back-arrow {
   color: #005582;
 }
 
-/* ===== ICONOS CONTACTO ===== */
+/* ==== ICONOS DE CONTACTO ==== */
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 35px;
+  margin: 30px 0;
 }
 
 .contact-icons a {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: #0077b5;
   transition: transform 0.3s ease, color 0.3s ease;
+  background: #f2f6f9;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .contact-icons a:hover {
-  color: #005582;
-  transform: scale(1.2);
+  color: #ffffff;
+  background-color: #0077b5;
+  transform: scale(1.1);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+}
+
+/* Texto debajo de los iconos */
+.contact-text {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  color: #444;
 }
 
 /* ===== FOOTER ===== */
