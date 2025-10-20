@@ -16,7 +16,6 @@
   </ul>
 </nav>
 
-<!-- Header tipo hero para Fotografía -->
 <header class="simple-hero">
   <h1>Fotografía</h1>
 </header>
@@ -26,9 +25,9 @@
     <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
     <img src="img/fotosocial.jpg" alt="Plaza de La Alpujarra, Granada" class="zoomable">
     <img src="img/fotoagua.jpg" alt="Fuente de agua. Carmen de los Mártires, Granada" class="zoomable">
-    <img src="img/fotoretrato1.jpg" alt="Retrato creativo" class="zoomable">
-    <img src="img/fotoretrato2.jpg" alt="Retrato ambiental" class="zoomable">
-    <img src="img/fotopaisaje.jpg" alt="Paisaje natural" class="zoomable">
+    <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
+    <img src="img/fotosocial.jpg" alt="Plaza de La Alpujarra, Granada" class="zoomable">
+    <img src="img/fotoagua.jpg" alt="Fuente de agua. Carmen de los Mártires, Granada" class="zoomable">
   </div>
 </section>
 
@@ -44,25 +43,25 @@
 </div>
 
 <script>
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImg");
-  const captionText = document.getElementById("caption");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const captionText = document.getElementById("caption");
 
-  document.querySelectorAll(".zoomable").forEach(img => {
-    img.addEventListener("click", function() {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    });
+document.querySelectorAll(".zoomable").forEach(img => {
+  img.addEventListener("click", function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
   });
+});
 
-  document.querySelector(".close").addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+document.querySelector(".close").addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
-  });
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
 </script>
 
 </body>
