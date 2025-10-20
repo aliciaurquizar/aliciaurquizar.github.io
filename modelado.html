@@ -3,69 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animación 3D - Alicia Urquízar</title>
+  <title>Animación 3D — Alicia Urquízar</title>
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
 <body>
 
-  <!-- Flecha de volver -->
-  <a href="index.html" class="back-arrow">← Inicio</a>
+<a href="index.html" class="back-arrow">← Inicio</a>
 
-  <!-- Header -->
-  <header class="simple-hero">
-    <h1>3D / Animación</h1>
-  </header>
+<header class="hero">
+  <h1>Animación 3D</h1>
+</header>
 
-  <!-- Galería de animación -->
 <section id="animacion">
-  <header class="simple-hero">
-    <h1>Animación 3D</h1>
-  </header>
-
   <div class="gallery">
-    <img src="img/planogeneralmesa.png" alt="Escena desayuno en Blender">
-    <img src="img/espadageneral.png" alt="Modelado de espada en Blender">
-    <img src="img/otraimagen.png" alt="Otro proyecto 3D">
+    <figure>
+      <img src="img/planogeneralmesa.png" alt="Escena desayuno en Blender" class="zoomable">
+      <figcaption>Escena desayuno</figcaption>
+    </figure>
+    <figure>
+      <img src="img/espadageneral.png" alt="Modelado de espada en Blender" class="zoomable">
+      <figcaption>Espada "Hora de aventuras"</figcaption>
+    </figure>
+    <figure>
+      <img src="img/otraimagen.png" alt="Otro proyecto 3D" class="zoomable">
+      <figcaption>Otro proyecto 3D</figcaption>
+    </figure>
   </div>
 </section>
 
+<footer>
+  <p>© 2025 Alicia Urquízar Rodríguez</p>
+</footer>
 
-  <footer>
-    <p>© 2025 Alicia Urquízar Rodríguez</p>
-  </footer>
+<div id="imageModal" class="image-modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
 
-  <!-- Modal para ampliar imágenes -->
-  <div id="imageModal" class="image-modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-    <div id="caption"></div>
-  </div>
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const captionText = document.getElementById("caption");
 
-  <script>
-    // Modal de imágenes
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const captionText = document.getElementById("caption");
-
-    document.querySelectorAll(".zoomable").forEach(img => {
-      img.addEventListener("click", function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
-      });
+  document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
     });
+  });
 
-    document.querySelector(".close").addEventListener("click", () => {
-      modal.style.display = "none";
-    });
+  document.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
 
-    modal.addEventListener("click", e => {
-      if (e.target === modal) modal.style.display = "none";
-    });
-  </script>
+  modal.addEventListener("click", e => {
+    if(e.target === modal) modal.style.display = "none";
+  });
+</script>
 
 </body>
 </html>
