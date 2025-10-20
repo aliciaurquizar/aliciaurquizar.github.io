@@ -219,19 +219,20 @@ header.simple-hero h1 {
   margin: 0 auto;
 }
 
-/* Galería tipo Pinterest */
+/* Galería tipo Masonry profesional */
 #fotografia .gallery {
-  column-count: 3; /* número de columnas */
-  column-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: 10px; /* base mínima de altura */
+  gap: 15px;
   margin: 40px auto 0;
   max-width: 1200px;
   padding: 0 10px;
 }
 
+/* Cada figura ocupa varias filas según su contenido */
 #fotografia .gallery figure {
-  display: inline-block;
-  width: 100%;
-  margin: 0 0 15px;
+  display: block;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -239,22 +240,21 @@ header.simple-hero h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Auto-ajuste de filas basado en contenido */
+#fotografia .gallery figure img {
+  width: 100%;
+  display: block;
+  height: auto;
+  grid-row-end: span 1;
+}
+
+/* Hover */
 #fotografia .gallery figure:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
-#fotografia .gallery img {
-  width: 100%;
-  height: auto; /* mantiene proporción real de cada imagen */
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-#fotografia .gallery img:hover {
-  transform: scale(1.03);
-}
-
+/* Caption */
 #fotografia .gallery figcaption {
   font-family: 'Raleway', sans-serif;
   font-size: 0.9rem;
@@ -268,13 +268,13 @@ header.simple-hero h1 {
 /* Ajuste móvil */
 @media (max-width: 900px) {
   #fotografia .gallery {
-    column-count: 2;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
 }
 
 @media (max-width: 600px) {
   #fotografia .gallery {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
 
