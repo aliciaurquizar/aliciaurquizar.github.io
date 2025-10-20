@@ -345,3 +345,46 @@ body.subpage .back-arrow {
   }
 }
 
+/* ===== HABILIDADES EN CAJITAS ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centra las cajas */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.skills .skill {
+  background-color: #ffffff; /* cajita blanca */
+  border: 2px solid #0077b5; /* borde azul */
+  color: #0077b5;             
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 12px;        /* esquinas redondeadas */
+  font-size: 1rem;
+  text-align: center;
+  min-width: 120px;           /* ancho mínimo para cada cajita */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  cursor: default;
+}
+
+.skills .skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background-color: #eef2f5; /* cambio sutil de fondo al pasar */
+}
+
+/* Ajuste móvil */
+@media (max-width: 700px) {
+  .skills {
+    gap: 12px;
+  }
+  .skills .skill {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+}
+
