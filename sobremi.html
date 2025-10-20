@@ -83,6 +83,18 @@
 </footer>
   <a href="#" class="scroll-top" title="Volver arriba">↑</a>
 
+  <script>
+const scrollTopBtn = document.querySelector('.scroll-top');
+scrollTopBtn.addEventListener('click', e => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+
 
 </body>
 </html>
