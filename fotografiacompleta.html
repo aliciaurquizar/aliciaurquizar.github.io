@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotografía - Alicia Urquízar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Navbar -->
 <nav>
   <ul>
     <li><a href="index.html#about">Sobre mí</a></li>
@@ -17,19 +16,25 @@
   </ul>
 </nav>
 
-<!-- Header -->
+<!-- Header tipo hero para Fotografía -->
 <header class="simple-hero">
   <h1>Fotografía</h1>
 </header>
 
-<!-- Galería -->
 <section id="fotografia">
   <div class="gallery">
     <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
     <img src="img/fotosocial.jpg" alt="Plaza de La Alpujarra, Granada" class="zoomable">
     <img src="img/fotoagua.jpg" alt="Fuente de agua. Carmen de los Mártires, Granada" class="zoomable">
+    <img src="img/fotoretrato1.jpg" alt="Retrato creativo" class="zoomable">
+    <img src="img/fotoretrato2.jpg" alt="Retrato ambiental" class="zoomable">
+    <img src="img/fotopaisaje.jpg" alt="Paisaje natural" class="zoomable">
   </div>
 </section>
+
+<footer>
+  <p>© 2025 Alicia Urquízar Rodríguez</p>
+</footer>
 
 <!-- Modal para ampliar imágenes -->
 <div id="imageModal" class="image-modal">
@@ -38,12 +43,6 @@
   <div id="caption"></div>
 </div>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 Alicia Urquízar Rodríguez</p>
-</footer>
-
-<!-- Script modal -->
 <script>
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
