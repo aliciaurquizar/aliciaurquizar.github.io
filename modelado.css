@@ -1,0 +1,64 @@
+#animacion .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 25px;
+}
+
+#animacion .gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#animacion .gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* MODAL */
+#animacion .image-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+#animacion .modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+#animacion #caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#animacion .close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#animacion .close:hover {
+  color: #ccc;
+}
