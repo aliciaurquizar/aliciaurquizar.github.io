@@ -185,6 +185,7 @@ body.subpage .back-arrow:hover {
 }
 
 /* ===== HERO / CABECERA AJUSTADO ===== */
+/* ===== HERO / CABECERA AJUSTADO ===== */
 .hero {
   text-align: center;
   padding: 60px 20px 40px; /* antes: 120px 20px 80px */
@@ -207,6 +208,15 @@ body.subpage .back-arrow:hover {
   margin-top: 0;
 }
 
+.simple-hero-photo {
+  width: 180px;          /* antes: 200px */
+  max-width: 90%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
 /* Categorías */
 .hero .categories-bar {
@@ -233,16 +243,6 @@ body.subpage .back-arrow:hover {
   transform: translateY(-2px);
 }
 
-/* Imagen de perfil en Sobre mí */
-.simple-hero-photo {
-  width: 200px;           /* ancho fijo bonito */
-  max-width: 90%;         /* no se salga en móviles */
-  height: auto;           /* mantiene proporción */
-  border-radius: 50%;     /* forma circular */
-  display: block;
-  margin: 20px auto 0;    /* centrada y separada del texto */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
 
 
 /* ===== SECCIONES ===== */
