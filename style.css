@@ -19,58 +19,39 @@ body.subpage nav ul li a:hover {
   color: #e67e22;
 }
 
-
-/* ===== NAV PRINCIPAL Y SUBPÁGINAS ===== */
+/* ===== NAV UNIFICADO ===== */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 121, 107, 0.95); /* verde azulado más visible */
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #e0e0e0;
   z-index: 1000;
-  padding: 14px 20px;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: flex-end;
   box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra más marcada */
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 nav ul {
-  display: flex;
-  justify-content: flex-end;
   list-style: none;
+  display: flex;
+  gap: 25px;
   margin: 0;
   padding: 0;
-  overflow-x: auto; 
-  scrollbar-width: thin; /* para Firefox */
-}
-
-nav ul::-webkit-scrollbar {
-  height: 6px;
-}
-
-nav ul::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 3px;
-}
-
-nav ul li {
-  margin-left: 30px;
-  flex: 0 0 auto;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff; /* blanco sobre verde */
   font-weight: 600;
-  font-size: 1.1rem;
-  padding: 6px 8px;
-  transition: color 0.3s, transform 0.3s;
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+  color: #222;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
-  color: #b2dfdb; /* verde muy suave */
-  border-bottom: 2px solid #ffffff; /* resalta el enlace */
+  color: #0077b5;
   transform: translateY(-2px);
 }
 
