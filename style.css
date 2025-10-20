@@ -69,7 +69,7 @@ nav ul li a:hover {
   margin-top: 0;
 }
 
-/* Categorías solo inicio */
+/* Categorías inicio */
 .hero .categories-bar {
   background-color: white;
   margin-top: 40px;
@@ -202,14 +202,14 @@ h3 {
 }
 
 /* ===== GALERÍA ANIMACIÓN ===== */
-#animacion .gallery {
+#videoarte .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   margin-top: 50px;
 }
 
-#animacion .gallery figure img {
+#videoarte .gallery figure img {
   height: 200px;
   object-fit: cover;
 }
@@ -223,8 +223,35 @@ h3 {
 
 .videos iframe {
   width: 100%;
-  aspect-ratio: 16/9;  /* mantiene proporción panorámica */
+  aspect-ratio: 16/9; /* mantiene proporción panorámica */
   border-radius: 8px;
+}
+
+/* ===== VER TODOS ===== */
+.ver-todos {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.ver-todos a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0077b5;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.ver-todos a::after {
+  content: '→';
+}
+
+.ver-todos a:hover {
+  color: #005582;
+  text-decoration: underline;
 }
 
 /* ===== FLECHA DE VOLVER ===== */
@@ -260,7 +287,7 @@ body.subpage .back-arrow {
   margin: 60px auto;
   padding: 40px 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: center;
 }
 
@@ -320,48 +347,24 @@ footer {
 
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 700px) {
-  .gallery figure img {
+  .gallery figure img,
+  #videoarte .gallery figure img {
     height: 150px;
   }
-  #animacion .gallery figure img {
-    height: 150px;
-  }
+
   .videos iframe {
     height: 220px;
   }
+
   .hero .intro h1 {
     font-size: 2.2rem;
   }
+
   .hero .intro p {
     font-size: 1rem;
   }
+
   header.simple-hero h1 {
     font-size: 2.2rem;
   }
-}
-/* ===== VER TODOS ===== */
-.ver-todos {
-  text-align: right;
-  margin-top: 15px;
-}
-
-.ver-todos a {
-  font-family: 'Raleway', sans-serif;  /* asegura fuente correcta */
-  font-weight: 600;
-  text-decoration: none;
-  color: #0077b5;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-
-.ver-todos a::after {
-  content: '→';
-}
-
-.ver-todos a:hover {
-  color: #005582;
-  text-decoration: underline;
 }
