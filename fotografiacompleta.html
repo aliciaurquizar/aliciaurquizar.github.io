@@ -16,10 +16,12 @@
   </ul>
 </nav>
 
+<!-- Flecha de regreso -->
+<a href="index.html" class="back-arrow" title="Volver al inicio">← Volver al inicio</a>
+
 <header class="simple-hero">
   <h1>Fotografía</h1>
 </header>
-
 <section id="fotografia">
   <div class="gallery">
     <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
@@ -42,7 +44,6 @@
   <p>© 2025 Alicia Urquízar Rodríguez</p>
 </footer>
 
-<!-- Modal para ampliar imágenes -->
 <div id="imageModal" class="image-modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="modalImg">
@@ -50,25 +51,25 @@
 </div>
 
 <script>
-const modal = document.getElementById("imageModal");
-const modalImg = document.getElementById("modalImg");
-const captionText = document.getElementById("caption");
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const captionText = document.getElementById("caption");
 
-document.querySelectorAll(".zoomable").forEach(img => {
-  img.addEventListener("click", function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+  document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    });
   });
-});
 
-document.querySelector(".close").addEventListener("click", () => {
-  modal.style.display = "none";
-});
+  document.querySelector(".close").addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
-});
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
 </script>
 
 </body>
