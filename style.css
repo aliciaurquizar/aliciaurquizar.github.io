@@ -184,26 +184,29 @@ body.subpage .back-arrow:hover {
   }
 }
 
-/* ===== HERO / CABECERA ===== */
-
+/* ===== HERO / CABECERA AJUSTADO ===== */
 .hero {
   text-align: center;
-  padding: 120px 20px 80px;
+  padding: 60px 20px 40px; /* antes: 120px 20px 80px */
   background-color: #eef2f5;
+  border-radius: 12px; /* opcional, da suavidad */
+  max-width: 900px;     /* opcional: limita ancho */
+  margin: 40px auto 60px; /* ajusta separación con secciones */
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2.5rem;   /* antes: 3rem */
   color: #222;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;   /* antes: 1.2rem */
   color: #555;
   margin-top: 0;
 }
+
 
 /* Categorías */
 .hero .categories-bar {
