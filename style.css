@@ -249,6 +249,49 @@ figcaption {
   margin-top: 8px;
   font-family: 'Raleway', sans-serif;
 }
+.simple-hero {
+  text-align: center;
+  padding: 120px 20px 40px;
+  background-color: #eef2f5;
+}
+
+.about-page {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0077b5;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 /* Footer */
 footer {
