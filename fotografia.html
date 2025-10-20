@@ -59,20 +59,23 @@
   const modalImg = document.getElementById("modalImg");
   const captionText = document.getElementById("caption");
 
-  document.querySelectorAll(".zoomable").forEach(img => {
+  document.querySelectorAll("#fotografia .gallery img").forEach(img => {
     img.addEventListener("click", function() {
       modal.style.display = "block";
       modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
+      captionText.innerHTML = this.alt; // muestra el alt
     });
   });
 
-  document.querySelector(".close").addEventListener("click", () => modal.style.display = "none");
+  document.querySelector(".close").addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
   modal.addEventListener("click", e => {
-    if(e.target === modal) modal.style.display = "none";
+    if (e.target === modal) modal.style.display = "none";
   });
 </script>
+
 
 </body>
 </html>
