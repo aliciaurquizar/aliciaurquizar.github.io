@@ -1,0 +1,61 @@
+/* ===== HEADER SOBRE MÍ ===== */
+header.simple-hero {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background-color: #eef2f5;
+}
+
+header.simple-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #0077b5;
+  margin-bottom: 15px;
+}
+
+header.simple-hero p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+}
+
+/* ===== FOTO SOBRE MÍ ===== */
+.simple-hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0077b5;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ===== SECCIÓN SOBRE MÍ ===== */
+#about-me {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 700px) {
+  header.simple-hero h1 {
+    font-size: 2.2rem;
+  }
+  header.simple-hero p {
+    font-size: 1rem;
+  }
+  .simple-hero-photo {
+    width: 140px;
+    height: 140px;
+  }
+  #about-me {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+}
