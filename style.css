@@ -20,18 +20,17 @@ body.subpage nav ul li a:hover {
 }
 
 
-/* ===== NAVBAR ===== */
 /* ===== NAV PRINCIPAL Y SUBPÁGINAS ===== */
 nav {
-  position: fixed;       /* Siempre fija arriba */
+  position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 121, 107, 0.95); /* verde azulado más visible */
   z-index: 1000;
-  padding: 12px 30px;
+  padding: 14px 20px;
   box-sizing: border-box;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Montserrat', sans-serif; /* Tipografía moderna y profesional */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra más marcada */
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav ul {
@@ -40,26 +39,77 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow-x: auto; /* Scroll si se desborda */
+  overflow-x: auto; 
+  scrollbar-width: thin; /* para Firefox */
+}
+
+nav ul::-webkit-scrollbar {
+  height: 6px;
+}
+
+nav ul::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 3px;
 }
 
 nav ul li {
-  margin-left: 25px;
-  flex: 0 0 auto; /* No se comprime demasiado */
+  margin-left: 30px;
+  flex: 0 0 auto;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #00796b;  /* Verde azulado elegante */
+  color: #ffffff; /* blanco sobre verde */
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  padding: 6px 8px;
   transition: color 0.3s, transform 0.3s;
-  white-space: nowrap; /* Evita saltos de línea */
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
 }
 
 nav ul li a:hover {
-  color: #004d40;    /* Hover más oscuro */
+  color: #b2dfdb; /* verde muy suave */
+  border-bottom: 2px solid #ffffff; /* resalta el enlace */
   transform: translateY(-2px);
+}
+
+/* ===== FLECHA DE VOLVER PARA SUBPÁGINAS ===== */
+body.subpage .back-arrow {
+  display: inline-block;
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  z-index: 1000;
+  background: rgba(0,121,107,0.95);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: color 0.3s, transform 0.3s;
+}
+
+body.subpage .back-arrow:hover {
+  color: #b2dfdb;
+  transform: translateX(-3px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 700px) {
+  nav ul {
+    justify-content: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+  body.subpage .back-arrow {
+    top: 80px;
+    font-size: 1.3rem;
+  }
 }
 
 /* ===== FLECHA DE VOLVER PARA SUBPÁGINAS ===== */
