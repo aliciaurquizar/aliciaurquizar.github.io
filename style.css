@@ -184,38 +184,58 @@ body.subpage .back-arrow:hover {
   }
 }
 
-/* ===== HERO / CABECERA AJUSTADO ===== */
-/* ===== HERO / CABECERA AJUSTADO ===== */
+/* ===== HERO / CABECERA MÁS COMPACTO ===== */
 .hero {
   text-align: center;
-  padding: 60px 20px 40px; /* antes: 120px 20px 80px */
+  padding: 40px 20px 30px; /* reduce el espacio arriba y abajo */
   background-color: #eef2f5;
-  border-radius: 12px; /* opcional, da suavidad */
-  max-width: 900px;     /* opcional: limita ancho */
-  margin: 40px auto 60px; /* ajusta separación con secciones */
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 30px auto 50px;
+  min-height: auto; /* que no ocupe toda la pantalla */
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;   /* antes: 3rem */
+  font-size: 2.2rem;  /* título más pequeño */
   color: #222;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .hero p {
-  font-size: 1.1rem;   /* antes: 1.2rem */
+  font-size: 1rem;    /* párrafo más discreto */
   color: #555;
   margin-top: 0;
 }
 
 .simple-hero-photo {
-  width: 180px;          /* antes: 200px */
-  max-width: 90%;
+  width: 150px;         /* imagen más pequeña */
+  max-width: 80%;
   height: auto;
   border-radius: 50%;
   display: block;
   margin: 15px auto 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== AJUSTES RESPONSIVE ===== */
+@media (max-width: 700px) {
+  .hero {
+    padding: 30px 15px 20px;
+    margin: 20px auto 40px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .simple-hero-photo {
+    width: 120px;
+  }
 }
 
 /* Categorías */
