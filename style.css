@@ -219,64 +219,57 @@ header.simple-hero h1 {
   margin: 0 auto;
 }
 
-/* Galería tipo Masonry profesional */
+/* Galería de Fotografía */
 #fotografia .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-auto-rows: 10px; /* base mínima de altura */
-  gap: 15px;
-  margin: 40px auto 0;
-  max-width: 1200px;
-  padding: 0 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
 }
 
-/* Cada figura ocupa varias filas según su contenido */
 #fotografia .gallery figure {
-  display: block;
+  margin: 0;
   border-radius: 12px;
   overflow: hidden;
+  background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Auto-ajuste de filas basado en contenido */
-#fotografia .gallery figure img {
-  width: 100%;
-  display: block;
-  height: auto;
-  grid-row-end: span 1;
-}
-
-/* Hover */
 #fotografia .gallery figure:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
-/* Caption */
-#fotografia .gallery figcaption {
+#fotografia .gallery img {
+  width: 100%;
+  height: 180px; /* uniforme */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#fotografia .gallery img:hover {
+  transform: scale(1.05);
+}
+
+#fotografia figcaption {
   font-family: 'Raleway', sans-serif;
   font-size: 0.9rem;
   color: #555;
-  padding: 8px;
+  padding: 10px;
   background: #fafafa;
   border-top: 1px solid #eee;
-  text-align: center;
 }
 
-/* Ajuste móvil */
-@media (max-width: 900px) {
-  #fotografia .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+@media (max-width: 700px) {
+  #fotografia .gallery img {
+    height: 150px;
   }
 }
 
-@media (max-width: 600px) {
-  #fotografia .gallery {
-    grid-template-columns: 1fr;
-  }
-}
 /* ===== ANIMACION ===== */
 /* Galería de Animación 3D */
 #animacion .gallery {
