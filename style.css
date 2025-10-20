@@ -44,6 +44,7 @@ nav ul li a:hover {
 }
 
 /* ===== HERO / CABECERA ===== */
+
 .hero {
   text-align: center;
   padding: 120px 20px 80px;
@@ -87,6 +88,18 @@ nav ul li a:hover {
   color: #005582;
   transform: translateY(-2px);
 }
+
+/* Imagen de perfil en Sobre mí */
+.simple-hero-photo {
+  width: 200px;           /* ancho fijo bonito */
+  max-width: 90%;         /* no se salga en móviles */
+  height: auto;           /* mantiene proporción */
+  border-radius: 50%;     /* forma circular */
+  display: block;
+  margin: 20px auto 0;    /* centrada y separada del texto */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 
 /* ===== SECCIONES ===== */
 section {
