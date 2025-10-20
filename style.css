@@ -1,4 +1,4 @@
-/* General */
+/* ===== GENERAL ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9f9;
@@ -9,7 +9,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 nav {
   position: fixed;
   top: 0;
@@ -46,7 +46,7 @@ nav ul li a:hover {
   transform: translateY(-2px);
 }
 
-/* ==== HEADER ==== */
+/* ===== HEADER ===== */
 .hero {
   position: relative;
   text-align: center;
@@ -87,23 +87,22 @@ nav ul li a:hover {
 }
 
 .categories-bar {
-  background-color: white; /* franja blanca */
+  background-color: white;
   margin-top: 40px;
   padding: 15px 0;
   display: flex;
   justify-content: center;
-  gap: 50px; /* espacio entre categorías */
+  gap: 50px;
   border-radius: 0 0 15px 15px;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
 }
 
 .categories-bar a {
-  font-family: 'Raleway', sans-serif; /* tipografía minimalista y elegante */
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   color: #0077b5;
   text-decoration: none;
-  position: relative;
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -113,23 +112,21 @@ nav ul li a:hover {
 }
 
 .categories-bar a:not(:last-child)::after {
-  content: "·"; /* separador minimalista */
+  content: "·";
   color: #ccc;
   margin-left: 30px;
 }
 
-/* Secciones */
+/* ===== SECCIONES ===== */
 section {
   max-width: 1000px;
   margin: 80px auto;
-  padding: 0 25px;
-  background-color: #fff; /* fondo de sección */
+  padding: 40px 25px;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 40px 25px;
 }
 
-/* Títulos */
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -146,7 +143,7 @@ h3 {
   margin-bottom: 15px;
 }
 
-/* ==== GALERÍA DE FOTOGRAFÍA ==== */
+/* ===== GALERÍA ===== */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +198,47 @@ h3 {
   }
 }
 
-/* Videos */
+/* ===== GALERÍA PÁGINA FOTOGRAFÍA (ORDENADA) ===== */
+header.simple-hero {
+  padding: 200px 20px 60px;
+  text-align: center;
+}
+
+header.simple-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #0077b5;
+  margin: 0 auto;
+}
+
+#fotografia .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+#fotografia .gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#fotografia .gallery img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 700px) {
+  #fotografia .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* ===== VIDEOS ===== */
 .videos {
   display: flex;
   flex-direction: column;
@@ -214,7 +251,7 @@ h3 {
   border-radius: 8px;
 }
 
-/* Listas */
+/* ===== LISTAS ===== */
 ul {
   list-style: none;
   padding: 0;
@@ -262,7 +299,7 @@ ul li a:hover {
   text-decoration: underline;
 }
 
-/* Fotos de perfil / About */
+/* ===== FOTOS PERFIL / ABOUT ===== */
 .about-page {
   max-width: 900px;
   margin: 60px auto;
@@ -301,7 +338,7 @@ ul li a:hover {
   }
 }
 
-/* Skills */
+/* ===== SKILLS ===== */
 .skills {
   background-color: #f8f8f8;
   padding: 60px 10%;
@@ -342,7 +379,7 @@ ul li a:hover {
   transform: scale(1.05);
 }
 
-/* ==== MODAL DE IMAGEN ==== */
+/* ===== MODAL DE IMAGEN ===== */
 .image-modal {
   display: none;
   position: fixed;
@@ -395,62 +432,8 @@ ul li a:hover {
   font-family: 'Raleway', sans-serif;
   font-size: 0.95em;
 }
-/* Header de la página de Fotografía */
-header.simple-hero {
-  padding: 200px 20px 80px; /* baja el título más abajo */
-  text-align: center;
-}
 
-header.simple-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #0077b5;
-  margin: 0 auto;
-}
-
-/* Header de la página de Fotografía */
-header.simple-hero {
-  padding: 200px 20px 60px; /* mueve el título más abajo */
-  text-align: center;
-}
-
-header.simple-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  color: #0077b5;
-  margin: 0;
-}
-
-/* Galería ordenada */
-#fotografia .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-#fotografia .gallery img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-#fotografia .gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Ajuste móvil */
-@media (max-width: 700px) {
-  #fotografia .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
-  }
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   font-size: 0.9em;
@@ -459,8 +442,9 @@ footer {
   padding: 40px 0 20px;
 }
 
+/* ===== FLECHA DE VOLVER ===== */
 .back-arrow {
-  display: inline-block;
+  display: none; /* visible solo en subpáginas vía JS o body class */
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   color: #0077b5;
@@ -477,4 +461,3 @@ footer {
   color: #005582;
   transform: translateX(-3px);
 }
-
