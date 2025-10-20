@@ -77,6 +77,31 @@ body.subpage .back-arrow:hover {
   transform: translateX(-3px);
 }
 
+/* ===== FLECHA VOLVER ARRIBA ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background: #0077b5;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.scroll-top:hover {
+  background: #005582;
+  transform: translateY(-3px);
+}
+
 /* ===== RESPONSIVO ===== */
 @media (max-width: 700px) {
   nav ul {
