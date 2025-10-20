@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Alicia Urquízar Rodríguez</title>
+
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">   <!-- Global -->
+  <link rel="stylesheet" href="index.css">   <!-- Solo Inicio -->
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 <body>
-
 
 <!-- Navbar -->
 <nav>
@@ -22,7 +28,6 @@
 
 <!-- Header -->
 <header class="hero">
-
   <div class="intro">
     <h1>Alicia Urquízar Rodríguez</h1>
     <p>PROYECTOS AUDIOVISUALES</p>
@@ -41,19 +46,16 @@
 
   <!-- Fotografía -->
   <h3 id="fotografia">Fotografía</h3>
- <div class="gallery">
-  <figure>
-    <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
-    <figcaption>Fotografía de concierto</figcaption>
-  </figure>
-  <figure>
-    <img src="img/fotosocial.jpg" alt="Plaza de La Alpujarra, Granada " class="zoomable">
-    <figcaption>Retrato social</figcaption>
-  </figure>
-
-</div>
-
-  
+  <div class="gallery">
+    <figure>
+      <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
+      <figcaption>Fotografía de concierto</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fotosocial.jpg" alt="Plaza de La Alpujarra, Granada" class="zoomable">
+      <figcaption>Retrato social</figcaption>
+    </figure>
+  </div>
   <div class="ver-todos">
     <a href="fotografia.html">Ver todos</a>
   </div>
@@ -61,20 +63,18 @@
   <!-- 3D / Animación -->
   <h3 id="videoarte">3D / Animación</h3>
   <div class="gallery">
-  <figure>
-    <img src="img/planogeneralmesa.png" alt="Modelado de mesa de desayuno en Blender " class="zoomable">
-    <figcaption>Escena desayuno</figcaption>
-  </figure>
-  <figure>
-    <img src="img/espadageneral.png" alt="Modelado de espada en Blender" class="zoomable">
-    <figcaption>Espada "Hora de aventuras"</figcaption>
-  </figure>
-    
-</div>
-    <div class="ver-todos">
+    <figure>
+      <img src="img/planogeneralmesa.png" alt="Modelado de mesa de desayuno en Blender" class="zoomable">
+      <figcaption>Escena desayuno</figcaption>
+    </figure>
+    <figure>
+      <img src="img/espadageneral.png" alt="Modelado de espada en Blender" class="zoomable">
+      <figcaption>Espada "Hora de aventuras"</figcaption>
+    </figure>
+  </div>
+  <div class="ver-todos">
     <a href="modelado.html">Ver todos</a>
   </div>
-
 
   <!-- Formato vídeo -->
   <h3 id="documentales">Vídeo</h3>
@@ -87,46 +87,28 @@
       <iframe src="https://www.youtube.com/embed/M_B8TrCUxSM" frameborder="0" allowfullscreen></iframe>
       <p class="video-role">Guion y dirección — Documental</p>
     </div>
-  
   </div>
-
   <div class="ver-todos">
     <a href="video.html">Ver todos</a>
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- Contacto -->
 <section id="contact">
   <h2>Contacto</h2>
-
   <p>Puedes contactar conmigo a través de los siguientes enlaces:</p>
-
   <div class="contact-icons">
-    <a href="mailto:aliciaurquizarrod@gmail.com" title="Correo">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/aliciaurquízarrodríguez" target="_blank" title="LinkedIn">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://www.instagram.com/tuusuario" target="_blank" title="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+    <a href="mailto:aliciaurquizarrod@gmail.com" title="Correo"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/aliciaurquízarrodríguez" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/tuusuario" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
   </div>
-
-
 </section>
-
-<!-- En el <head> de tu HTML (si no lo tienes ya) añade esto -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-</section>
-
 
 <footer>
   <p>© 2025 Alicia Urquízar Rodríguez</p>
 </footer>
 
-  <!-- Modal para ampliar imágenes -->
+<!-- Modal para ampliar imágenes -->
 <div id="imageModal" class="image-modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="modalImg">
@@ -134,7 +116,6 @@
 </div>
 
 <script>
-  // Selecciona el modal y los elementos dentro
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImg");
   const captionText = document.getElementById("caption");
@@ -147,11 +128,9 @@
     });
   });
 
-  // Cerrar modal
   document.querySelector(".close").addEventListener("click", () => {
     modal.style.display = "none";
   });
-
 
   modal.addEventListener("click", (e) => {
     if (e.target === modal) modal.style.display = "none";
@@ -160,4 +139,3 @@
 
 </body>
 </html>
-
