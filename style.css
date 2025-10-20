@@ -19,12 +19,12 @@ body.subpage nav ul li a:hover {
   color: #e67e22;
 }
 
-/* NAV PRINCIPAL */
+/* ===== NAV PRINCIPAL ===== */
 nav.main-nav {
-  background: #ffffff;
+  background: #fff;
   text-align: center;
   padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -38,7 +38,7 @@ nav.main-nav ul {
   display: flex;
   justify-content: center;
   gap: 50px;
-  flex-wrap: wrap; /* Permite que los enlaces bajen en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 /* Enlaces */
@@ -46,17 +46,17 @@ nav.main-nav ul li a {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  color: #222;
+  color: #222;  /* color principal minimalista */
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
 
 nav.main-nav ul li a:hover {
-  color: #0077b5;
+  color: #0077b5; /* azul profesional */
   transform: translateY(-2px);
 }
 
-/* Responsivo para pantallas pequeñas */
+/* Responsivo */
 @media screen and (max-width: 768px) {
   nav.main-nav ul {
     gap: 30px;
@@ -75,8 +75,6 @@ nav.main-nav ul li a:hover {
     font-size: 0.9rem;
   }
 }
-
-
 /* ===== FLECHA DE VOLVER PARA SUBPÁGINAS ===== */
 body.subpage .back-arrow {
   display: inline-block;
