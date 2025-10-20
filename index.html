@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio de Alicia Urquízar Rodríguez</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio de Alicia Urquízar Rodríguez</title>
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courier+Prime&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="index.css">
+<!-- CSS unificado -->
+<link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 <body>
 
 <nav>
   <ul>
-    <li><a href="sobremi.html">Sobre mí</a></li>
+    <li><a href="index.html">Inicio</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
 </nav>
@@ -28,9 +27,8 @@
 <header class="hero">
   <div class="intro">
     <h1>Alicia Urquízar Rodríguez</h1>
-    <p>PROYECTOS AUDIOVISUALES</p>
+    <p>Proyectos audiovisuales</p>
   </div>
-
   <div class="categories-bar">
     <a href="#fotografia">Fotografía</a>
     <a href="#videoarte">3D / Animación</a>
@@ -41,7 +39,6 @@
 <section id="projects">
   <h2>Proyectos destacados</h2>
 
-  <!-- Fotografía -->
   <h3 id="fotografia">Fotografía</h3>
   <div class="gallery">
     <figure>
@@ -53,11 +50,8 @@
       <figcaption>Retrato social</figcaption>
     </figure>
   </div>
-  <div class="ver-todos">
-    <a href="fotografia.html">Ver todos</a>
-  </div>
+  <div class="ver-todos"><a href="fotografia.html">Ver todos</a></div>
 
-  <!-- 3D / Animación -->
   <h3 id="videoarte">3D / Animación</h3>
   <div class="gallery">
     <figure>
@@ -69,11 +63,8 @@
       <figcaption>Espada "Hora de aventuras"</figcaption>
     </figure>
   </div>
-  <div class="ver-todos">
-    <a href="modelado.html">Ver todos</a>
-  </div>
+  <div class="ver-todos"><a href="modelado.html">Ver todos</a></div>
 
-  <!-- Formato vídeo -->
   <h3 id="documentales">Vídeo</h3>
   <div class="videos">
     <div class="video-item">
@@ -85,9 +76,7 @@
       <p class="video-role">Guion y dirección — Documental</p>
     </div>
   </div>
-  <div class="ver-todos">
-    <a href="video.html">Ver todos</a>
-  </div>
+  <div class="ver-todos"><a href="video.html">Ver todos</a></div>
 </section>
 
 <section id="contact">
@@ -104,14 +93,15 @@
   <p>© 2025 Alicia Urquízar Rodríguez</p>
 </footer>
 
-<div class="image-modal">
+<!-- Modal para ampliar imágenes -->
+<div id="imageModal" class="image-modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="modalImg">
   <div id="caption"></div>
 </div>
 
 <script>
-const modal = document.querySelector(".image-modal");
+const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImg");
 const captionText = document.getElementById("caption");
 
