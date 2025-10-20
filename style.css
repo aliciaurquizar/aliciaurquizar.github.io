@@ -400,30 +400,61 @@ h3 {
   color: #ccc;
 }
 
-/* ===== FLECHA VOLVER ===== */
+/* Flechas ocultas por defecto */
+.back-arrow, .scroll-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+/* Flecha visible */
+.back-arrow.visible, .scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animación al aparecer */
+.scroll-top.visible {
+  transform: translateY(0);
+}
+
+.back-arrow.visible {
+  transform: translateX(0);
+}
+
+/* Ajustes flechas */
 .back-arrow {
-  display: none;
   position: fixed;
   top: 100px;
   left: 20px;
-  z-index: 1000;
   background: rgba(255,255,255,0.95);
   color: #0077b5;
-  text-decoration: none;
   font-size: 1.5rem;
   padding: 6px 10px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transform: translateX(-20px);
+  z-index: 1000;
 }
 
-body.subpage .back-arrow {
-  display: inline-block;
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #0077b5;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(20px);
+  z-index: 1000;
 }
 
-.back-arrow:hover {
-  color: #005582;
-  transform: translateX(-3px);
-}
 
 /* ===== CONTACTO ===== */
 #contact {
