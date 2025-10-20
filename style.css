@@ -101,6 +101,51 @@ nav ul li a:hover {
   margin-left: 30px;
 }
 
+/* ===== FOTO SOBRE MÍ ===== */
+.about-page {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-photo {
+  width: 220px;     
+  height: 220px;    
+  object-fit: cover; 
+  border-radius: 50%;
+  border: 3px solid #0077b5;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Ajuste móvil */
+@media (max-width: 700px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
 /* ===== SUBPÁGINAS ===== */
 header.simple-hero {
   padding: 160px 20px 70px;
