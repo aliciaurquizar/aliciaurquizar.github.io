@@ -339,3 +339,29 @@ footer {
     font-size: 2.2rem;
   }
 }
+/* ===== VER TODOS ===== */
+.ver-todos {
+  text-align: right;
+  margin-top: 15px;
+}
+
+.ver-todos a {
+  font-family: 'Raleway', sans-serif;  /* asegura fuente correcta */
+  font-weight: 600;
+  text-decoration: none;
+  color: #0077b5;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.ver-todos a::after {
+  content: '→';
+}
+
+.ver-todos a:hover {
+  color: #005582;
+  text-decoration: underline;
+}
