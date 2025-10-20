@@ -1,0 +1,51 @@
+/* Header específico de la página de Fotografía */
+header.simple-hero {
+  padding: 200px 20px 60px; /* baja el título más abajo */
+  text-align: center;
+}
+
+header.simple-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #0077b5;
+  margin: 0 auto;
+}
+
+/* Galería ordenada para Fotografía */
+#fotografia {
+  max-width: 1000px;
+  margin: 40px auto 80px auto; /* espacio arriba y abajo */
+  padding: 0 25px;
+}
+
+#fotografia .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+#fotografia .gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#fotografia .gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Centrar título de la página */
+#fotografia h1, #fotografia h2, #fotografia h3 {
+  text-align: center;
+}
+
+/* Ajustes móviles */
+@media (max-width: 700px) {
+  #fotografia .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+}
