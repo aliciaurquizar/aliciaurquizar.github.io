@@ -461,3 +461,27 @@ footer {
   margin-top: 60px;
   padding: 40px 0 20px;
 }
+
+/* Flecha de retroceso */
+.back-arrow {
+  display: inline-block;
+  margin: 100px 0 20px 20px; /* separada del nav y del contenido */
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #0077b5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.back-arrow:hover {
+  color: #005582;
+  transform: translateX(-3px);
+}
+
+@media (max-width: 700px) {
+  .back-arrow {
+    margin: 120px 0 20px 20px; /* ajusta la separación para móvil */
+  }
+}
+
