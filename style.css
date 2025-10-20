@@ -19,19 +19,20 @@ body.subpage nav ul li a:hover {
   color: #e67e22;
 }
 
-/* ===== NAV PRINCIPAL ===== */
-nav.main-nav {
-  background: #fff;
+/* ===== NAV UNIFICADO PARA TODAS LAS PÁGINAS ===== */
+nav.main-nav, nav {
+  background: #ffffff;
   text-align: center;
   padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  font-family: 'Raleway', sans-serif; /* tipografía elegante */
 }
 
 /* Lista de enlaces */
-nav.main-nav ul {
+nav.main-nav ul, nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,39 +43,50 @@ nav.main-nav ul {
 }
 
 /* Enlaces */
-nav.main-nav ul li a {
-  font-family: 'Raleway', sans-serif;
+nav.main-nav ul li a, nav ul li a {
   font-weight: 600;
   font-size: 1rem;
-  color: #222;  /* color principal minimalista */
+  color: #333333; /* gris oscuro elegante */
   text-decoration: none;
-  transition: color 0.3s, transform 0.3s;
+  padding: 8px 12px;
+  transition: color 0.3s, background 0.3s, transform 0.3s;
+  border-radius: 5px;
 }
 
-nav.main-nav ul li a:hover {
-  color: #0077b5; /* azul profesional */
+/* Hover elegante */
+nav.main-nav ul li a:hover, nav ul li a:hover {
+  color: #ffffff;
+  background-color: #555555; /* gris más oscuro para hover */
   transform: translateY(-2px);
 }
 
-/* Responsivo */
+/* Enlace activo (opcional) */
+nav.main-nav ul li a.active, nav ul li a.active {
+  color: #ffffff;
+  background-color: #444444;
+}
+
+/* Responsive para tablet y móvil */
 @media screen and (max-width: 768px) {
-  nav.main-nav ul {
+  nav.main-nav ul, nav ul {
     gap: 30px;
   }
-  nav.main-nav ul li a {
+  nav.main-nav ul li a, nav ul li a {
     font-size: 0.95rem;
+    padding: 6px 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  nav.main-nav ul {
+  nav.main-nav ul, nav ul {
     flex-direction: column;
     gap: 15px;
   }
-  nav.main-nav ul li a {
+  nav.main-nav ul li a, nav ul li a {
     font-size: 0.9rem;
   }
 }
+
 /* ===== FLECHA DE VOLVER PARA SUBPÁGINAS ===== */
 body.subpage .back-arrow {
   display: inline-block;
