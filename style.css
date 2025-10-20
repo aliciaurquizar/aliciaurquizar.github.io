@@ -11,13 +11,7 @@ body {
 
 body.subpage nav ul li a {
   font-family: 'Playfair Display', serif; /* nueva tipografía */
-  color: #d35400; /* color distinto */
   font-weight: 700;
-}
-
-body.subpage nav ul li a:hover {
-  color: #e67e22;
-}
 
 /* ===== NAV UNIFICADO PARA TODAS LAS PÁGINAS ===== */
 nav.main-nav, nav {
