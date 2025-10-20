@@ -8,70 +8,70 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a href="index.html" class="back-arrow">← Inicio</a>
 
-<nav>
-  <ul>
-    <li><a href="index.html#about">Sobre mí</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
-  </ul>
-</nav>
+  <!-- Flecha de volver -->
+  <a href="index.html" class="back-arrow">← Inicio</a>
 
-<!-- Flecha de regreso -->
-<a href="index.html" class="back-arrow" title="Inicio">← Volver al inicio</a>
+  <!-- Header -->
+  <header class="simple-hero">
+    <h1>Fotografía</h1>
+  </header>
 
-<header class="simple-hero">
-  <h1>Fotografía</h1>
-</header>
-<section id="fotografia">
-  <div class="gallery">
-    <img src="img/fotoconcierto2.jpg" alt="Grupo musical Ballena. Sala Planta Baja, Granada" class="zoomable">
-    <img src="img/fotosocial.jpg" alt="Plaza de La Alpujarra, Granada" class="zoomable">
-    <img src="img/patos.jpg" alt="Patos. Parque Federico García Lorca, Granada" class="zoomable">
-    <img src="img/conciertorayden.jpg" alt="Rayden. Sala Industrial Copera" class="zoomable">
-    <img src="img/roma1.jpg" alt="Roma, Italia" class="zoomable">
-    <img src="img/fotoconcierto.jpg" alt="Concierto Ballena. Sala Planta Baja, Granada" class="zoomable">
-    <img src="img/fotoagua.jpg" alt="Fuente de agua. Carmen de los Mártires, Granada" class="zoomable">
-    <img src="img/fotopavo.jpg" alt="Pavo real. Carmen de los Mártires, Granada" class="zoomable">
-    <img src="img/fotovela.jpg" alt="Velas. El Rocío, Huelva " class="zoomable">
-    
-    
-    
-  
+  <!-- Galería de Fotografía -->
+  <section id="fotografia">
+    <div class="gallery">
+      <figure>
+        <img src="img/fotoconcierto2.jpg" alt="Proyecto Fotografía 1" class="zoomable">
+        <figcaption>Fotografía de concierto</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fotosocial.jpg" alt="Proyecto Fotografía 2" class="zoomable">
+        <figcaption>Retrato social</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fotoagua.jpg" alt="Proyecto Fotografía 3" class="zoomable">
+        <figcaption>Fotografía artística</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fotonaturaleza.jpg" alt="Proyecto Fotografía 4" class="zoomable">
+        <figcaption>Fotografía de naturaleza</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Alicia Urquízar Rodríguez</p>
+  </footer>
+
+  <!-- Modal para ampliar imágenes -->
+  <div id="imageModal" class="image-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
   </div>
-</section>
 
-<footer>
-  <p>© 2025 Alicia Urquízar Rodríguez</p>
-</footer>
+  <script>
+    // Modal de imágenes
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("caption");
 
-<div id="imageModal" class="image-modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
-  <div id="caption"></div>
-</div>
-
-<script>
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImg");
-  const captionText = document.getElementById("caption");
-
-  document.querySelectorAll(".zoomable").forEach(img => {
-    img.addEventListener("click", function() {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
+    document.querySelectorAll(".zoomable").forEach(img => {
+      img.addEventListener("click", function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      });
     });
-  });
 
-  document.querySelector(".close").addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+    document.querySelector(".close").addEventListener("click", () => {
+      modal.style.display = "none";
+    });
 
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
-  });
-</script>
+    modal.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
 
 </body>
 </html>
