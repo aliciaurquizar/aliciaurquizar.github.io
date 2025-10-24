@@ -336,13 +336,15 @@ h3 {
 }
 
 /* ===== VIDEOS ===== */
+/* ===== VIDEOS ===== */
 /* Contenedor de videos */
 .videos {
   display: flex;
   flex-direction: column;
   gap: 40px; /* separación entre videos */
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px 20px; /* reduce el padding superior */
+  margin-top: 0; /* opcional, para acercarlo al header */
 }
 
 /* Tarjetas de video */
@@ -350,12 +352,13 @@ h3 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1000px; /* un poco más ancho */
+  max-width: 1000px;
   background-color: #f8f8f8;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 0; /* ya usamos gap en .videos */
 }
 
 .video-card:hover {
@@ -375,7 +378,7 @@ h3 {
 .video-left iframe {
   width: 100%;
   height: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   border: none;
 }
 
@@ -425,6 +428,7 @@ h3 {
     gap: 30px;
   }
 }
+
 
 /* ===== VER TODOS ===== */
 .ver-todos {
