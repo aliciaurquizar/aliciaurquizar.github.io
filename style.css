@@ -82,15 +82,15 @@ nav.main-nav ul li a.active, nav ul li a.active {
 /* Contenedor solo para los dos videos principales */
 .videos-iniciales {
   display: flex;
-  gap: 30px;               /* espacio entre los dos videos */
+  gap: 40px;               /* espacio entre los dos videos */
   justify-content: center;  /* centrarlos */
   margin-top: 20px;         /* espacio desde el header */
   flex-wrap: wrap;          /* se apilan en móvil */
 }
 
 .videos-iniciales .video-item {
-  width: 48%;               /* dos videos por fila */
-  min-width: 300px;
+   flex: 1 1 45%;           /* ancho relativo, ajustable */
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,6 +101,7 @@ nav.main-nav ul li a.active, nav ul li a.active {
   aspect-ratio: 16 / 9;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
 }
 
 /* roles debajo del video */
