@@ -336,47 +336,40 @@ h3 {
 }
 
 /* ===== VIDEOS ===== */
+/* Contenedor de videos */
 .videos {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px; /* separación entre videos */
   align-items: center;
-  paddin: 20px;
+  padding: 20px;
 }
 
-.videos iframe {
-  width: 100%;
-  max-width: 600px;
-  aspect-ratio: 16/9;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-/* ===== VIDEOS EN DOS COLUMNAS ===== */
+/* Tarjetas de video */
 .video-card {
   display: flex;
+  flex-direction: row;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px; /* un poco más ancho */
   background-color: #f8f8f8;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 30px;
 }
 
 .video-card:hover {
   transform: scale(1.01);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-/* Izquierda: video */
+/* Lado izquierdo: video */
 .video-left {
   flex: 1 1 50%;
-  position: relative;
-  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000;
 }
 
 .video-left iframe {
@@ -386,7 +379,7 @@ h3 {
   border: none;
 }
 
-/* Derecha: texto */
+/* Lado derecho: texto */
 .video-right {
   flex: 1 1 50%;
   padding: 25px;
@@ -398,61 +391,41 @@ h3 {
 
 .video-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #0077b5;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
 .video-role {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   color: #444;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
 .video-description {
   font-family: 'Raleway', sans-serif;
   color: #555;
   line-height: 1.5;
-  margin: 0;
 }
 
-/* Igual altura para todos los video-cards */
-.video-card {
-  height: 300px; /* puedes ajustar esta altura */
-}
-
-/* El iframe se recorta proporcionalmente dentro de la altura fija */
-.video-left iframe {
-  object-fit: cover;
-}
-
-/* 📱 Responsive: se apilan verticalmente */
+/* Responsive: apilar verticalmente en móviles */
 @media (max-width: 700px) {
   .video-card {
     flex-direction: column;
-    height: auto;
   }
-
-  .video-left,
-  .video-right {
-    flex: none;
+  .video-left, .video-right {
     width: 100%;
+    flex: none;
   }
-
   .video-right {
     padding: 15px;
   }
-}
-
-
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  .videos iframe {
-    max-width: 100%;
-    height: auto;
+  .videos {
+    gap: 30px;
   }
 }
+
 /* ===== VER TODOS ===== */
 .ver-todos {
   text-align: right;
