@@ -381,15 +381,22 @@ h3 {
 }
 
 /* ===== VIDEOS ===== */
+
+/* Contenedor general de todos los videos */
 .videos {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;           /* separación entre videos */
-  align-items: center;
-  padding: 20px  /* menos espacio superior */
-  margin-top: 10;
+  margin-top: 20px;      /* espacio desde el header */
+  padding: 0 20px;       /* padding lateral */
 }
 
+/* Contenedor que agrupa los video-cards */
+#videos {
+  display: flex;
+  flex-direction: column; /* vertical por defecto */
+  gap: 50px;              /* separación entre videos */
+  align-items: center;
+}
+
+/* Tarjeta de cada video */
 .video-card {
   display: flex;
   width: 100%;
@@ -406,6 +413,7 @@ h3 {
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
+/* Lado izquierdo: iframe */
 .video-left {
   flex: 1;
   display: flex;
@@ -416,12 +424,13 @@ h3 {
 
 .video-left iframe {
   width: 100%;
-  height: 100%;
   aspect-ratio: 16/9;
   border: none;
   object-fit: cover;
+  border-radius: 0;
 }
 
+/* Lado derecho: texto */
 .video-right {
   flex: 1;
   padding: 25px;
@@ -451,21 +460,70 @@ h3 {
   line-height: 1.5;
 }
 
-/* Responsive */
+/* ===== VIDEOS INICIALES HORIZONTALES (homepage) ===== */
+.videos-iniciales {
+  display: flex;
+  gap: 40px;               /* espacio entre los dos videos */
+  justify-content: center;  /* centrarlos */
+  margin-top: 20px;         /* espacio desde el header */
+  flex-wrap: wrap;          /* se apilan en móvil */
+}
+
+.videos-iniciales .video-item {
+  flex: 1 1 45%;            /* ancho relativo, ajustable */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videos-iniciales iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+.videos-iniciales .video-role {
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  color: #444;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 700px) {
+
+  /* Tarjetas verticales en móvil */
   .video-card {
     flex-direction: column;
   }
-  .video-left, .video-right {
+
+  .video-left,
+  .video-right {
     width: 100%;
     flex: none;
   }
+
   .video-right {
     padding: 15px;
   }
-  .videos {
+
+  /* Separación entre videos un poco menor */
+  #videos {
     gap: 30px;
-    padding-top: 10px;
+  }
+
+  /* Videos iniciales apilan verticalmente */
+  .videos-iniciales {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .videos-iniciales .video-item {
+    width: 100%;
   }
 }
 
