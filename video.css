@@ -12,46 +12,53 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-/* ===== NUEVO FORMATO DE VIDEOS ===== */
+/* ===== VIDEOS EN DOS COLUMNAS ===== */
 .video-card {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  background-color: #f8f8f8;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
   max-width: 900px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .video-card:hover {
   transform: scale(1.01);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.video-preview {
-  flex: 1 1 45%;
+/* Izquierda: video */
+.video-left {
+  flex: 1 1 50%;
+  position: relative;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.video-preview iframe {
+.video-left iframe {
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 9;
   border: none;
-  border-radius: 10px;
 }
 
-.video-info {
-  flex: 1 1 55%;
+/* Derecha: texto */
+.video-right {
+  flex: 1 1 50%;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #fff;
 }
 
 .video-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #0077b5;
   margin: 0 0 10px;
 }
@@ -70,19 +77,31 @@
   margin: 0;
 }
 
-/* 📱 Responsive: apilado en móviles */
+/* Igual altura para todos los video-cards */
+.video-card {
+  height: 300px; /* puedes ajustar esta altura */
+}
+
+/* El iframe se recorta proporcionalmente dentro de la altura fija */
+.video-left iframe {
+  object-fit: cover;
+}
+
+/* 📱 Responsive: se apilan verticalmente */
 @media (max-width: 700px) {
   .video-card {
     flex-direction: column;
-    text-align: center;
+    height: auto;
   }
 
-  .video-preview iframe {
-    border-radius: 10px 10px 0 0;
+  .video-left,
+  .video-right {
+    flex: none;
+    width: 100%;
   }
 
-  .video-info {
-    padding-top: 10px;
+  .video-right {
+    padding: 15px;
   }
 }
 
