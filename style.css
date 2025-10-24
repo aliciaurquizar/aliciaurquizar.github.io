@@ -183,7 +183,7 @@ body.subpage .back-arrow:hover {
 /* ===== HERO / CABECERA MÁS COMPACTO ===== */
 .hero {
   text-align: center;
-  padding: 40px 20px 30px; /* reduce el espacio arriba y abajo */
+  padding: 50px 20px 30px; /* reduce el espacio arriba y abajo */
   background-color: #eef2f5;
   border-radius: 12px;
   max-width: 900px;
@@ -195,7 +195,7 @@ body.subpage .back-arrow:hover {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;  /* título más pequeño */
   color: #222;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .hero p {
