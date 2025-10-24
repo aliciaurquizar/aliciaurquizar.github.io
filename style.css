@@ -183,7 +183,7 @@ body.subpage .back-arrow:hover {
 /* ===== HERO / CABECERA MÁS COMPACTO ===== */
 .hero {
   text-align: center;
-  padding: 50px 20px 30px; /* reduce el espacio arriba y abajo */
+  padding: 40px 20px 20px; /* reduce el espacio arriba y abajo */
   background-color: #eef2f5;
   border-radius: 12px;
   max-width: 900px;
@@ -339,9 +339,9 @@ h3 {
 .videos {
   display: flex;
   flex-direction: column;
-  gap: 40px;           /* separación entre videos */
+  gap: 30px;           /* separación entre videos */
   align-items: center;
-  padding: 20px 20px 40px; /* menos espacio superior */
+  padding: 20px 20px 30px; /* menos espacio superior */
   margin-top: 0;
 }
 
