@@ -336,21 +336,17 @@ h3 {
 }
 
 /* ===== VIDEOS ===== */
-/* ===== VIDEOS ===== */
-/* Contenedor de videos */
 .videos {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* separación entre videos */
+  gap: 40px;           /* separación entre videos */
   align-items: center;
-  padding: 10px 20px 20px; /* reduce el padding superior */
-  margin-top: 0; /* opcional, para acercarlo al header */
+  padding: 20px 20px 40px; /* menos espacio superior */
+  margin-top: 0;
 }
 
-/* Tarjetas de video */
 .video-card {
   display: flex;
-  flex-direction: row;
   width: 100%;
   max-width: 1000px;
   background-color: #f8f8f8;
@@ -358,7 +354,6 @@ h3 {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 0; /* ya usamos gap en .videos */
 }
 
 .video-card:hover {
@@ -366,9 +361,8 @@ h3 {
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
-/* Lado izquierdo: video */
 .video-left {
-  flex: 1 1 50%;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -380,11 +374,11 @@ h3 {
   height: 100%;
   aspect-ratio: 16/9;
   border: none;
+  object-fit: cover;
 }
 
-/* Lado derecho: texto */
 .video-right {
-  flex: 1 1 50%;
+  flex: 1;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -412,7 +406,7 @@ h3 {
   line-height: 1.5;
 }
 
-/* Responsive: apilar verticalmente en móviles */
+/* Responsive */
 @media (max-width: 700px) {
   .video-card {
     flex-direction: column;
@@ -426,9 +420,9 @@ h3 {
   }
   .videos {
     gap: 30px;
+    padding-top: 10px;
   }
 }
-
 
 /* ===== VER TODOS ===== */
 .ver-todos {
