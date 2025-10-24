@@ -105,6 +105,28 @@
   }
 }
 
+/* ===== AJUSTE DE ANCHO PARA LA SECCIÓN DE VIDEOS ===== */
+#videos {
+  max-width: 1200px; /* un poco más ancho que las secciones normales */
+  margin: 80px auto; /* centrado */
+  padding: 40px 40px; /* más espacio lateral */
+}
+
+/* Hacemos que las cajas ocupen más espacio horizontal */
+.video-card {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Ajustamos proporciones para que el video y el texto queden equilibrados */
+.video-left {
+  flex: 1 1 55%;
+}
+
+.video-right {
+  flex: 1 1 45%;
+}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 700px) {
